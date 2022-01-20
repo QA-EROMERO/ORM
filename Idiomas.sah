@@ -1,0 +1,28 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Idiomas"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_click(_textbox("TxtIdioma"));
+_setValue(_textbox("TxtIdioma"), "ER_IDIOMA1");
+_click(_textbox("TxtSiglas"));
+_setValue(_textbox("TxtSiglas"), "IDIOMA1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

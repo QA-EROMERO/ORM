@@ -1,0 +1,338 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Preguntas de cuestionario"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*===================================================================*/
+/*================== PREGUNTA 1 (Opción múltiple) ===================*/
+/*===================================================================*/
+_click(_span("Detalle"));
+_click(_textbox("txtDimension"));
+_click(_imageSubmitButton("btnDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Dimensión 1 (Estándar)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_imageSubmitButton("btnBusqueda"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Pregunta 1 (Opción múltiple)");
+_setValue(_textarea("txtDetalle"), "Detalle de la ER_Pregunta 1 (Opción múltiple)");
+_click(_span("Respuesta"));
+_setSelected(_select("cmbTipoPregunta"), "Opción múltiple");
+_setValue(_textarea("txtOpcion1"), "ER_Opción 1");
+_setValue(_textbox("txtPorcentaje1"), "1.00");
+_setValue(_textarea("txtOpcion2"), "ER_Opción 2");
+_setValue(_textbox("txtPorcentaje2"), "2.00");
+_setValue(_textarea("txtOpcion3"), "ER_Opción 3");
+_setValue(_textbox("txtPorcentaje3"), "3.00");
+_setValue(_textarea("txtOpcion4"), "ER_Opción 4");
+_setValue(_textbox("txtPorcentaje4"), "4.00");
+_setValue(_textarea("txtOpcion5"), "ER_Opción 5");
+_setValue(_textbox("txtPorcentaje5"), "5.00");
+_setValue(_textarea("txtOpcion6"), "ER_Opción 6");
+_setValue(_textbox("txtPorcentaje6"), "1.00");
+_setValue(_textarea("txtOpcion7"), "ER_Opción 7");
+_setValue(_textbox("txtPorcentaje7"), "2.00");
+_setValue(_textarea("txtOpcion8"), "ER_Opción 8");
+_setValue(_textbox("txtPorcentaje8"), "3.00");
+_setValue(_textarea("txtOpcion9"), "ER_Opción 9");
+_setValue(_textbox("txtPorcentaje9"), "4.00");
+_setValue(_textarea("txtOpcion10"), "ER_Opción 10");
+_setValue(_textbox("txtPorcentaje10"), "5.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*===================================================================*/
+/*================== PREGUNTA 2 (Opción múltiple) ===================*/
+/*===================================================================*/
+_click(_span("Detalle"));
+_click(_textbox("txtDimension"));
+_click(_imageSubmitButton("btnDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Dimensión 1 (Estándar)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_imageSubmitButton("btnBusqueda"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Pregunta 2 (Opción múltiple)");
+_setValue(_textarea("txtDetalle"), "Detalle de la ER_Pregunta 2 (Opción múltiple)");
+_click(_span("Respuesta"));
+_setSelected(_select("cmbTipoPregunta"), "Opción múltiple");
+_setValue(_textarea("txtOpcion1"), "ER_Opción 1");
+_setValue(_textbox("txtPorcentaje1"), "1.00");
+_setValue(_textarea("txtOpcion2"), "ER_Opción 2");
+_setValue(_textbox("txtPorcentaje2"), "2.00");
+_setValue(_textarea("txtOpcion3"), "ER_Opción 3");
+_setValue(_textbox("txtPorcentaje3"), "3.00");
+_setValue(_textarea("txtOpcion4"), "ER_Opción 4");
+_setValue(_textbox("txtPorcentaje4"), "1.00");
+_setValue(_textarea("txtOpcion5"), "ER_Opción 5");
+_setValue(_textbox("txtPorcentaje5"), "2.00");
+_setValue(_textarea("txtOpcion6"), "ER_Opción 6");
+_setValue(_textbox("txtPorcentaje6"), "3.00");
+_setValue(_textarea("txtOpcion7"), "ER_Opción 7");
+_setValue(_textbox("txtPorcentaje7"), "1.00");
+_setValue(_textarea("txtOpcion8"), "ER_Opción 8");
+_setValue(_textbox("txtPorcentaje8"), "2.00");
+_setValue(_textarea("txtOpcion9"), "ER_Opción 9");
+_setValue(_textbox("txtPorcentaje9"), "3.00");
+_setValue(_textarea("txtOpcion10"), "ER_Opción 10");
+_setValue(_textbox("txtPorcentaje10"), "1.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*===================================================================*/
+/*================== PREGUNTA 3 (Sí-No) ===================*/
+/*===================================================================*/
+_click(_span("Detalle"));
+_click(_textbox("txtDimension"));
+_click(_imageSubmitButton("btnDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Dimensión 1 (Estándar)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_imageSubmitButton("btnBusqueda"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Pregunta 3 (Sí-No)");
+_setValue(_textarea("txtDetalle"), "Detalle de la ER_Pregunta 3 (Sí-No)");
+_click(_span("Respuesta"));
+_setSelected(_select("cmbTipoPregunta"), "Si/no");
+_setValue(_textbox("txtPorcentajeSi"), "1.00");
+_setValue(_textbox("txtPorcentajeNo"), "2.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*===================================================================*/
+/*================== PREGUNTA 4 (Sí-No) ===================*/
+/*===================================================================*/
+_click(_span("Detalle"));
+_click(_textbox("txtDimension"));
+_click(_imageSubmitButton("btnDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Dimensión 1 (Estándar)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_imageSubmitButton("btnBusqueda"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Pregunta 4 (Sí-No)");
+_setValue(_textarea("txtDetalle"), "Detalle de la ER_Pregunta 4 (Sí-No)");
+_click(_span("Respuesta"));
+_setSelected(_select("cmbTipoPregunta"), "Si/no");
+_setValue(_textbox("txtPorcentajeSi"), "2.00");
+_setValue(_textbox("txtPorcentajeNo"), "1.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*===================================================================*/
+/*================== PREGUNTA 1 (Opción múltiple) ===================*/
+/*===================================================================*/
+_click(_span("Detalle"));
+_click(_textbox("txtDimension"));
+_click(_imageSubmitButton("btnDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_imageSubmitButton("btnBusqueda"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Pregunta 1 (Opción múltiple)");
+_setValue(_textarea("txtDetalle"), "Detalle de la ER_Pregunta 1 (Opción múltiple)");
+_click(_span("Respuesta"));
+_setSelected(_select("cmbTipoPregunta"), "Opción múltiple");
+_setValue(_textarea("txtOpcion1"), "ER_Opción 1");
+_setValue(_textbox("txtPorcentaje1"), "1.00");
+_setValue(_textarea("txtOpcion2"), "ER_Opción 2");
+_setValue(_textbox("txtPorcentaje2"), "2.00");
+_setValue(_textarea("txtOpcion3"), "ER_Opción 3");
+_setValue(_textbox("txtPorcentaje3"), "3.00");
+_setValue(_textarea("txtOpcion4"), "ER_Opción 4");
+_setValue(_textbox("txtPorcentaje4"), "4.00");
+_setValue(_textarea("txtOpcion5"), "ER_Opción 5");
+_setValue(_textbox("txtPorcentaje5"), "5.00");
+_setValue(_textarea("txtOpcion6"), "ER_Opción 6");
+_setValue(_textbox("txtPorcentaje6"), "1.00");
+_setValue(_textarea("txtOpcion7"), "ER_Opción 7");
+_setValue(_textbox("txtPorcentaje7"), "2.00");
+_setValue(_textarea("txtOpcion8"), "ER_Opción 8");
+_setValue(_textbox("txtPorcentaje8"), "3.00");
+_setValue(_textarea("txtOpcion9"), "ER_Opción 9");
+_setValue(_textbox("txtPorcentaje9"), "4.00");
+_setValue(_textarea("txtOpcion10"), "ER_Opción 10");
+_setValue(_textbox("txtPorcentaje10"), "5.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*===================================================================*/
+/*================== PREGUNTA 2 (Opción múltiple) ===================*/
+/*===================================================================*/
+_click(_span("Detalle"));
+_click(_textbox("txtDimension"));
+_click(_imageSubmitButton("btnDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_imageSubmitButton("btnBusqueda"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Pregunta 2 (Opción múltiple)");
+_setValue(_textarea("txtDetalle"), "Detalle de la ER_Pregunta 2 (Opción múltiple)");
+_click(_span("Respuesta"));
+_setSelected(_select("cmbTipoPregunta"), "Opción múltiple");
+_setValue(_textarea("txtOpcion1"), "ER_Opción 1");
+_setValue(_textbox("txtPorcentaje1"), "1.00");
+_setValue(_textarea("txtOpcion2"), "ER_Opción 2");
+_setValue(_textbox("txtPorcentaje2"), "2.00");
+_setValue(_textarea("txtOpcion3"), "ER_Opción 3");
+_setValue(_textbox("txtPorcentaje3"), "3.00");
+_setValue(_textarea("txtOpcion4"), "ER_Opción 4");
+_setValue(_textbox("txtPorcentaje4"), "1.00");
+_setValue(_textarea("txtOpcion5"), "ER_Opción 5");
+_setValue(_textbox("txtPorcentaje5"), "2.00");
+_setValue(_textarea("txtOpcion6"), "ER_Opción 6");
+_setValue(_textbox("txtPorcentaje6"), "3.00");
+_setValue(_textarea("txtOpcion7"), "ER_Opción 7");
+_setValue(_textbox("txtPorcentaje7"), "1.00");
+_setValue(_textarea("txtOpcion8"), "ER_Opción 8");
+_setValue(_textbox("txtPorcentaje8"), "2.00");
+_setValue(_textarea("txtOpcion9"), "ER_Opción 9");
+_setValue(_textbox("txtPorcentaje9"), "3.00");
+_setValue(_textarea("txtOpcion10"), "ER_Opción 10");
+_setValue(_textbox("txtPorcentaje10"), "1.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*===================================================================*/
+/*================== PREGUNTA 3 (Sí-No) ===================*/
+/*===================================================================*/
+_click(_span("Detalle"));
+_click(_textbox("txtDimension"));
+_click(_imageSubmitButton("btnDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_imageSubmitButton("btnBusqueda"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Pregunta 3 (Sí-No)");
+_setValue(_textarea("txtDetalle"), "Detalle de la ER_Pregunta 3 (Sí-No)");
+_click(_span("Respuesta"));
+_setSelected(_select("cmbTipoPregunta"), "Si/no");
+_setValue(_textbox("txtPorcentajeSi"), "1.00");
+_setValue(_textbox("txtPorcentajeNo"), "2.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*===================================================================*/
+/*================== PREGUNTA 4 (Sí-No) ===================*/
+/*===================================================================*/
+_click(_span("Detalle"));
+_click(_textbox("txtDimension"));
+_click(_imageSubmitButton("btnDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_textbox("txtOrganizacion"));
+_click(_imageSubmitButton("btnBusqueda"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Pregunta 4 (Sí-No)");
+_setValue(_textarea("txtDetalle"), "Detalle de la ER_Pregunta 4 (Sí-No)");
+_click(_span("Respuesta"));
+_setSelected(_select("cmbTipoPregunta"), "Si/no");
+_setValue(_textbox("txtPorcentajeSi"), "2.00");
+_setValue(_textbox("txtPorcentajeNo"), "1.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

@@ -1,0 +1,350 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_DOCUMENTOS_DE_REFERENCIA = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Tipo de documento"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de documento 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de documento 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de documento 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de documento 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de documento 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*================= DOCUMENTOS DE REFERENCIA ======================*/
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de documento 1");
+_click(_list("container"));
+_click(_div("ER_Tipo de documento 1"));
+_click($AGREGAR_DOCUMENTOS_DE_REFERENCIA);
+/* TAB PROPIEDADES*/
+_click(_span("Propiedades"));
+_setValue(_textbox("txtDescripcion"), "ER_Documento de referencia 1");
+//_click(_file("uplArchivo"));
+_setFile2(_file("uplArchivo"), "C:\\Users\\E\\sahi_pro\\userdata\\Nota.txt");
+_click(_textbox("txtFechaVigencia"));
+_click(_link("14"));
+_click(_textbox("txtFechaRevision"));
+_click(_link("14"));
+_click(_imageSubmitButton("btnSrcResCambiar"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResRevision"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResAprobacion"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB LISTAS DE USUARIOS */
+_click(_span("LblTab2"));
+_click(_imageSubmitButton("btnSrcLstNotificar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstNotificar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstVisualizar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstVisualizar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstCambiar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstCambiar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de documento 2");
+_click(_list("container"));
+_click(_div("ER_Tipo de documento 2"));
+_click($AGREGAR_DOCUMENTOS_DE_REFERENCIA);
+/* TAB PROPIEDADES*/
+_click(_span("Propiedades"));
+_setValue(_textbox("txtDescripcion"), "ER_Documento de referencia 2");
+//_click(_file("uplArchivo"));
+_setFile2(_file("uplArchivo"), "C:\\Users\\E\\sahi_pro\\userdata\\Nota.txt");
+_click(_textbox("txtFechaVigencia"));
+_click(_link("14"));
+_click(_textbox("txtFechaRevision"));
+_click(_link("14"));
+_click(_imageSubmitButton("btnSrcResCambiar"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResRevision"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResAprobacion"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB LISTAS DE USUARIOS */
+_click(_span("LblTab2"));
+_click(_imageSubmitButton("btnSrcLstNotificar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstNotificar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstVisualizar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstVisualizar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstCambiar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstCambiar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 3 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de documento 3");
+_click(_list("container"));
+_click(_div("ER_Tipo de documento 3"));
+_click($AGREGAR_DOCUMENTOS_DE_REFERENCIA);
+/* TAB PROPIEDADES*/
+_click(_span("Propiedades"));
+_setValue(_textbox("txtDescripcion"), "ER_Documento de referencia 3");
+//_click(_file("uplArchivo"));
+_setFile2(_file("uplArchivo"), "C:\\Users\\E\\sahi_pro\\userdata\\Nota.txt");
+_click(_textbox("txtFechaVigencia"));
+_click(_link("14"));
+_click(_textbox("txtFechaRevision"));
+_click(_link("14"));
+_click(_imageSubmitButton("btnSrcResCambiar"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResRevision"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResAprobacion"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB LISTAS DE USUARIOS */
+_click(_span("LblTab2"));
+_click(_imageSubmitButton("btnSrcLstNotificar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstNotificar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstVisualizar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstVisualizar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstCambiar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstCambiar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 4 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de documento 4");
+_click(_list("container"));
+_click(_div("ER_Tipo de documento 4"));
+_click($AGREGAR_DOCUMENTOS_DE_REFERENCIA);
+/* TAB PROPIEDADES*/
+_click(_span("Propiedades"));
+_setValue(_textbox("txtDescripcion"), "ER_Documento de referencia 4");
+//_click(_file("uplArchivo"));
+_setFile2(_file("uplArchivo"), "C:\\Users\\E\\sahi_pro\\userdata\\Nota.txt");
+_click(_textbox("txtFechaVigencia"));
+_click(_link("14"));
+_click(_textbox("txtFechaRevision"));
+_click(_link("14"));
+_click(_imageSubmitButton("btnSrcResCambiar"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResRevision"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResAprobacion"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB LISTAS DE USUARIOS */
+_click(_span("LblTab2"));
+_click(_imageSubmitButton("btnSrcLstNotificar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstNotificar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstVisualizar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstVisualizar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstCambiar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstCambiar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 5 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de documento 5");
+_click(_list("container"));
+_click(_div("ER_Tipo de documento 5"));
+_click($AGREGAR_DOCUMENTOS_DE_REFERENCIA);
+/* TAB PROPIEDADES*/
+_click(_span("Propiedades"));
+_setValue(_textbox("txtDescripcion"), "ER_Documento de referencia 5");
+//_click(_file("uplArchivo"));
+_setFile2(_file("uplArchivo"), "C:\\Users\\E\\sahi_pro\\userdata\\Nota.txt");
+_click(_textbox("txtFechaVigencia"));
+_click(_link("14"));
+_click(_textbox("txtFechaRevision"));
+_click(_link("14"));
+_click(_imageSubmitButton("btnSrcResCambiar"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResRevision"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcResAprobacion"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB LISTAS DE USUARIOS */
+_click(_span("LblTab2"));
+_click(_imageSubmitButton("btnSrcLstNotificar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstNotificar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstVisualizar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstVisualizar"));
+_wait(3000);
+_click(_imageSubmitButton("btnSrcLstCambiar"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Lista de Usuarios 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddLstCambiar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

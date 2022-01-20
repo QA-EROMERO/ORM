@@ -1,0 +1,388 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Campos adicionales de programas"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*-========== Campos adicionales para Detalle de estructura ==========-*/;
+/*Campo Numérico*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Detalle de estructura");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 1 (Numérico)");
+_setSelected(_select("cmbTipoCampo"), "Numérico");
+_setValue(_textbox("txtLongitud"), "5");
+_click(_span("Valores"));
+_click(_span("Valores"));
+_click(_span("Valores"));
+_setValue(_textbox("txtValorCampo"), "12345");
+_click(_span("Valores"));
+_setValue(_textbox("txtDescripcionCampo"), "ER_V1");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "56895");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V2");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "69832");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V3");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "69875");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V4");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "54682");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V5");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Alfanumérico*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Detalle de estructura");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 2 (Alfanumérico)");
+_setSelected(_select("cmbTipoCampo"), "Alfanumérico");
+_setValue(_textbox("txtLongitud"), "5");
+_click(_span("Valores"));
+_click(_span("Valores"));
+_click(_span("Valores"));
+_setValue(_textbox("txtValorCampo"), "A0001");
+_click(_span("Valores"));
+_setValue(_textbox("txtDescripcionCampo"), "ER_V1");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "B0002");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V2");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "C0003");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V3");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "D0004");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V4");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "E0005");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V5");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Comentario*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Detalle de estructura");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 3 (Comentario)");
+_setSelected(_select("cmbTipoCampo"), "Comentario");
+_setValue(_textbox("txtLongitud"), "2000");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Fecha*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Detalle de estructura");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 4 (Fecha)");
+_setSelected(_select("cmbTipoCampo"), "Fecha");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Si/no*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Detalle de estructura");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 5 (Sí-No)");
+_setSelected(_select("cmbTipoCampo"), "Si/no");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*-========== Campos adicionales para Entidades ==========-*/;
+/*Campo Numérico*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Entidades");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 1 (Numérico)");
+_setSelected(_select("cmbTipoCampo"), "Numérico");
+_setValue(_textbox("txtLongitud"), "5");
+_click(_span("Valores"));
+_click(_span("Valores"));
+_click(_span("Valores"));
+_setValue(_textbox("txtValorCampo"), "12345");
+_click(_span("Valores"));
+_setValue(_textbox("txtDescripcionCampo"), "ER_V1");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "56895");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V2");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "69832");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V3");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "69875");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V4");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "54682");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V5");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Alfanumérico*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Entidades");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 2 (Alfanumérico)");
+_setSelected(_select("cmbTipoCampo"), "Alfanumérico");
+_setValue(_textbox("txtLongitud"), "5");
+_click(_span("Valores"));
+_click(_span("Valores"));
+_click(_span("Valores"));
+_setValue(_textbox("txtValorCampo"), "A0001");
+_click(_span("Valores"));
+_setValue(_textbox("txtDescripcionCampo"), "ER_V1");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "B0002");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V2");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "C0003");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V3");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "D0004");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V4");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "E0005");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V5");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Comentario*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Entidades");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 3 (Comentario)");
+_setSelected(_select("cmbTipoCampo"), "Comentario");
+_setValue(_textbox("txtLongitud"), "2000");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Fecha*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Entidades");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 4 (Fecha)");
+_setSelected(_select("cmbTipoCampo"), "Fecha");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Si/no*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Entidades");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 5 (Sí-No)");
+_setSelected(_select("cmbTipoCampo"), "Si/no");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*-========== Campos adicionales para Registro de eventos/pérdida ==========-*/;
+/*Campo Numérico*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Registro de eventos/pérdida");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 1 (Numérico)");
+_setSelected(_select("cmbTipoCampo"), "Numérico");
+_setValue(_textbox("txtLongitud"), "5");
+_click(_span("Valores"));
+_click(_span("Valores"));
+_click(_span("Valores"));
+_setValue(_textbox("txtValorCampo"), "12345");
+_click(_span("Valores"));
+_setValue(_textbox("txtDescripcionCampo"), "ER_V1");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "56895");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V2");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "69832");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V3");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "69875");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V4");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "54682");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V5");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Alfanumérico*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Registro de eventos/pérdida");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 2 (Alfanumérico)");
+_setSelected(_select("cmbTipoCampo"), "Alfanumérico");
+_setValue(_textbox("txtLongitud"), "5");
+_click(_span("Valores"));
+_click(_span("Valores"));
+_click(_span("Valores"));
+_setValue(_textbox("txtValorCampo"), "A0001");
+_click(_span("Valores"));
+_setValue(_textbox("txtDescripcionCampo"), "ER_V1");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "B0002");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V2");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "C0003");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V3");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "D0004");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V4");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setValue(_textbox("txtValorCampo"), "E0005");
+_setValue(_textbox("txtDescripcionCampo"), "ER_V5");
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Comentario*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Registro de eventos/pérdida");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 3 (Comentario)");
+_setSelected(_select("cmbTipoCampo"), "Comentario");
+_setValue(_textbox("txtLongitud"), "2000");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Fecha*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Registro de eventos/pérdida");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 4 (Fecha)");
+_setSelected(_select("cmbTipoCampo"), "Fecha");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/*Campo Si/no*/
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Registro de eventos/pérdida");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 5 (Sí-No)");
+_setSelected(_select("cmbTipoCampo"), "Si/no");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

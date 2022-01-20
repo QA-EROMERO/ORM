@@ -1,0 +1,42 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Canales de servicio"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*=============== AGREGANDO CANALES DE SERVICIO ====================*/
+/*==================================================================*/
+_setValue(_textbox("txtDescripcion"), "ER_Canal de servicio 1");
+_setValue(_textbox("txtCodigoInterno"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtDescripcion"), "ER_Canal de servicio 2");
+_setValue(_textbox("txtCodigoInterno"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtDescripcion"), "ER_Canal de servicio 3");
+_setValue(_textbox("txtCodigoInterno"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtDescripcion"), "ER_Canal de servicio 4");
+_setValue(_textbox("txtCodigoInterno"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtDescripcion"), "ER_Canal de servicio 5");
+_setValue(_textbox("txtCodigoInterno"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+

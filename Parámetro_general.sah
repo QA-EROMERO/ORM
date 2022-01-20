@@ -1,0 +1,39 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Parámetro general"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+/* TAB 	DATOS GENERALES */
+_setValue(_textbox("MASCARA_UNI_NEGtxt"), "##.##.##");
+_setValue(_textbox("PRODUCTOtxt"), "##.##.##");
+
+/* TAB VAR */
+_click(_span("VAR"));
+_setValue(_textbox("txtPercentil"), "95");
+_setValue(_textbox("txtCiclos"), "1000");
+_click(_textbox("UUUID_CLASIFICADORVARtxt"));
+_click(_imageSubmitButton("UUID_CLASIFICADOR_btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

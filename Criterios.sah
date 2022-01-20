@@ -1,0 +1,41 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Criterios"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+_click(_textbox("txtPrograma"));
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Registro de eventos/pérdidas");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Criterio 1");
+_click(_textbox("txtCampo"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+//_setValue(_textbox("DESCRIPCION[1]"), "Etapa del evento");
+_setValue(_textbox("DESCRIPCION[1]"), "Etapa del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setSelected(_select("cmbComparacion"), "=");
+_setValue(_textbox("txtValor"), "2");
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+_click(_div("wijmo-wijsuperpanel-contentwrapper"));

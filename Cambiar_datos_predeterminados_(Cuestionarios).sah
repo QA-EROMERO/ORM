@@ -1,0 +1,40 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_span("EROMERO"));
+_wait(5000);
+_click(_textbox("txtOrga"));
+_click(_imageSubmitButton("btnSrcOrga"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDimension"));
+_click(_imageSubmitButton("btnSrcDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtEstructura"));
+_click(_imageSubmitButton("btnSrcEstructura"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Estructura 1 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setSelected(_checkbox("ckDefault").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("Aceptar[1]"));

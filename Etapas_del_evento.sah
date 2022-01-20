@@ -1,0 +1,336 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Etapas del evento"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+
+/* VARIABLES */
+$AGREGAR_ROL = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* ECONÓMICA */
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 1 (Económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "Económica");
+_setSelected(_checkbox("chkCalculoVar").checked = true);
+_setSelected(_select("cmbEvaluarVar"), "Importe del evento");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 2 (Económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "Económica");
+_setSelected(_checkbox("chkCalculoVar").checked = true);
+_setSelected(_select("cmbEvaluarVar"), "Valor cero");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 3 (Económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "Económica");
+_setSelected(_checkbox("chkCalculoVar").checked = true);
+_setSelected(_select("cmbEvaluarVar"), "Valor contable");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 4 (Económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "Económica");
+_setSelected(_checkbox("chkCalculoVar").checked = true);
+_setSelected(_select("cmbEvaluarVar"), "Total pérdida neta");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 5 (Económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "Económica");
+_setSelected(_checkbox("chkElimina").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 6 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 6 (Económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "Económica");
+_setSelected(_checkbox("chkBloqueado").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* NO ECONÓMICA */
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 1 (No económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "No económica");
+_setSelected(_checkbox("chkCalculoVar").checked = true);
+_setSelected(_select("cmbEvaluarVar"), "Importe del evento");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 2 (No económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "No económica");
+_setSelected(_checkbox("chkCalculoVar").checked = true);
+_setSelected(_select("cmbEvaluarVar"), "Valor cero");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 3 (No económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "No económica");
+_setSelected(_checkbox("chkCalculoVar").checked = true);
+_setSelected(_select("cmbEvaluarVar"), "Valor contable");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 4 (No económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "No económica");
+_setSelected(_checkbox("chkCalculoVar").checked = true);
+_setSelected(_select("cmbEvaluarVar"), "Total pérdida neta");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 5 (No económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "No económica");
+_setSelected(_checkbox("chkElimina").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 6 */
+_setValue(_textbox("txtDescripcion"), "ER_Etapa del Evento 6 (No económica)");
+_setSelected(_select("cmbCategoriaPerdida"), "No económica");
+_setSelected(_checkbox("chkBloqueado").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ASIGNACIÓN DE ROLES */
+/* REGISTRO 1 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 1 (Económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 1 (Económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 2 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 2 (Económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 2 (Económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 3 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 3 (Económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 3 (Económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 4 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 4 (Económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 4 (Económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 5 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 5 (Económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 5 (Económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 6 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 6 (Económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 6 (Económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 7 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 1 (No económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 1 (No económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 8 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 2 (No económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 2 (No económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 9 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 3 (No económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 3 (No económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 10 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 4 (No económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 4 (No económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 11 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 5 (No económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 5 (No económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* REGISTRO 12 */
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Etapa del Evento 6 (No económica)");
+_click(_list("container"));
+_click(_div("ER_Etapa del Evento 6 (No económica)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

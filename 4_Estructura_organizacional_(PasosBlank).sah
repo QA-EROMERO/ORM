@@ -1,0 +1,24 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Estructura organizacional"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+_setSelected(_select("lstAccion"), "Agregar nodo");
+_setValue(_textbox("txtDescripcion"), "ER_Guatemala");
+_click(_link("Organización"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("ui-icon ui-icon-close"));

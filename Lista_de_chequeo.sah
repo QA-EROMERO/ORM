@@ -1,0 +1,168 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_VALORES_DE_LISTA = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Lista de chequeo"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Lista de chequeo 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Lista de chequeo 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Lista de chequeo 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Lista de chequeo 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Lista de chequeo 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 1 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Lista de chequeo 1");
+_click(_list("container"));
+_click(_div("ER_Lista de chequeo 1"));
+_click($AGREGAR_VALORES_DE_LISTA);
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 1");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 2");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 2");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 3");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 3");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 2 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Lista de chequeo 2");
+_click(_list("container"));
+_click(_div("ER_Lista de chequeo 2"));
+_click($AGREGAR_VALORES_DE_LISTA);
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 1");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 2");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 2");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 3");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 3");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 3 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Lista de chequeo 3");
+_click(_list("container"));
+_click(_div("ER_Lista de chequeo 3"));
+_click($AGREGAR_VALORES_DE_LISTA);
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 1");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 2");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 2");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 3");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 3");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 4 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Lista de chequeo 4");
+_click(_list("container"));
+_click(_div("ER_Lista de chequeo 4"));
+_click($AGREGAR_VALORES_DE_LISTA);
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 1");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 2");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 2");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 3");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 3");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 5 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Lista de chequeo 5");
+_click(_list("container"));
+_click(_div("ER_Lista de chequeo 5"));
+_click($AGREGAR_VALORES_DE_LISTA);
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 1");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 2");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 2");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Valor de la lista 3");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Valor de la lista 3");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Valor de la lista 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

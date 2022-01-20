@@ -1,0 +1,33 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_ESTRUCTURA_ORGANIZACIONAL = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[4]");
+
+_click(_listItem("Roles"));
+_wait(5000);
+_setValue(_textbox("NOMBRE"), "Administrador");
+_click(_list("container"));
+_click(_div("Administrador"));
+_click(_link("Estructura organizacional[1]"));
+_click($AGREGAR_ESTRUCTURA_ORGANIZACIONAL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[4]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

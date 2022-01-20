@@ -1,0 +1,253 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Escala"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 4 */
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 5 */
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*==================== RANGOS DE ESCALA ===========================*/
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 1");
+_click(_div("ER_Escala 1"));
+_click(_div("ER_Escala 1"));
+_click(_span("ui-button-text[71]"));
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 2");
+_click(_div("ER_Escala 2"));
+_click(_div("ER_Escala 2"));
+_click(_span("ui-button-text[71]"));
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 3 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 3");
+_click(_div("ER_Escala 3"));
+_click(_div("ER_Escala 3"));
+_click(_span("ui-button-text[71]"));
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 4 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 4");
+_click(_div("ER_Escala 4"));
+_click(_div("ER_Escala 4"));
+_click(_span("ui-button-text[71]"));
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 5 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 5");
+_click(_div("ER_Escala 5"));
+_click(_div("ER_Escala 5"));
+_click(_span("ui-button-text[71]"));
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

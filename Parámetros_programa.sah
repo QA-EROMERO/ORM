@@ -1,0 +1,474 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Parámetros programa"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(8000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Eventos de Pérdida");
+_click(_imageSubmitButton("btnSrcRol"));
+_wait(3000);
+_click(_textbox("Nombre"));
+_setValue(_textbox("Nombre"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRol"));
+_wait(3000);
+/*================ AGREGAR CAMPOS ================*/
+/*===== Datos del Evento =====*/
+/*CAMPO 1*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Descripción del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 2*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Categoria");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 3*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Tipo de pérdida");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 4*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+
+_setValue(_textbox("DESCRIPCION[1]"), "Tipo de evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 5*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Etapa del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 6*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Fecha introducción evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+
+/*CAMPO 7*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Moneda del registro");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+
+/*CAMPO 8*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Tasa tipo de cambio");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+
+/*CAMPO 9*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Cuantía");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 10*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Cuenta contable");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 11*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos del evento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Centro de costo");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+
+
+/*===== Datos generales =====*/
+/*CAMPO 1*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Detalle de estructura");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 2*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Recurso tecnológico");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 3*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Unidad de negocio");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 4*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Código de sucursal");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 5*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Líneas operativas");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 6*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Responsable reporte");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 7*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Productos o Servicios");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 8*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Canal de servicio");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 9*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Riesgos vinculado");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+
+
+/*===== Documento adjunto =====*/
+/*CAMPO 1*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Documento adjunto");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Comentario");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 2*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Documento adjunto");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Documentos de referencia");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+
+
+/*===== Recuperaciones =====*/
+/*CAMPO 1*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Recuperaciones");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Cuenta recuperada");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+
+
+/*========== CAMPOS ADICIONALES ===========*/
+/*===== Datos generales =====*/
+/*CAMPO 1*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Campo adicional 1 (Numérico)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 2*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Campo adicional 2 (Alfanumérico)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 3*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Campo adicional 3 (Comentario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 4*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Campo adicional 4 (Fecha)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*CAMPO 5*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "Datos generales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Campo adicional 5 (Sí-No)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+//Guardar Parámetros programa
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

@@ -1,0 +1,300 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_FRECUENCIA = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Tipos de frecuencia"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de frecuencia 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de frecuencia 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de frecuencia 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de frecuencia 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de frecuencia 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*========================= FRECUENCIA ============================*/
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de frecuencia 1");
+_click(_list("container"));
+_click(_div("ER_Tipo de frecuencia 1"));
+_click($AGREGAR_FRECUENCIA);
+/* FRECUENCIA 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 1");
+_setSelected(_select("cmbPuntos"), "1");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "5");
+_setValue(_textbox("txtMinimoOcurrencias"), "4");
+_setValue(_textbox("txtMaximoOcurrencias"), "10");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 2");
+_setSelected(_select("cmbPuntos"), "2");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "15");
+_setValue(_textbox("txtMinimoOcurrencias"), "8");
+_setValue(_textbox("txtMaximoOcurrencias"), "25");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 3");
+_setSelected(_select("cmbPuntos"), "3");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "14");
+_setValue(_textbox("txtMaximoOcurrencias"), "50");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 4");
+_setSelected(_select("cmbPuntos"), "4");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "3");
+_setValue(_textbox("txtMinimoOcurrencias"), "45");
+_setValue(_textbox("txtMaximoOcurrencias"), "200");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 5");
+_setSelected(_select("cmbPuntos"), "5");
+_setSelected(_select("cmbPeriodo"), "Años");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "150");
+_setValue(_textbox("txtMaximoOcurrencias"), "875");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de frecuencia 2");
+_click(_list("container"));
+_click(_div("ER_Tipo de frecuencia 2"));
+_click($AGREGAR_FRECUENCIA);
+/* FRECUENCIA 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 1");
+_setSelected(_select("cmbPuntos"), "1");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "5");
+_setValue(_textbox("txtMinimoOcurrencias"), "4");
+_setValue(_textbox("txtMaximoOcurrencias"), "10");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 2");
+_setSelected(_select("cmbPuntos"), "2");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "15");
+_setValue(_textbox("txtMinimoOcurrencias"), "8");
+_setValue(_textbox("txtMaximoOcurrencias"), "25");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 3");
+_setSelected(_select("cmbPuntos"), "3");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "14");
+_setValue(_textbox("txtMaximoOcurrencias"), "50");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 4");
+_setSelected(_select("cmbPuntos"), "4");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "3");
+_setValue(_textbox("txtMinimoOcurrencias"), "45");
+_setValue(_textbox("txtMaximoOcurrencias"), "200");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 5");
+_setSelected(_select("cmbPuntos"), "5");
+_setSelected(_select("cmbPeriodo"), "Años");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "150");
+_setValue(_textbox("txtMaximoOcurrencias"), "875");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 3 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de frecuencia 3");
+_click(_list("container"));
+_click(_div("ER_Tipo de frecuencia 3"));
+_click($AGREGAR_FRECUENCIA);
+/* FRECUENCIA 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 1");
+_setSelected(_select("cmbPuntos"), "1");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "5");
+_setValue(_textbox("txtMinimoOcurrencias"), "4");
+_setValue(_textbox("txtMaximoOcurrencias"), "10");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 2");
+_setSelected(_select("cmbPuntos"), "2");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "15");
+_setValue(_textbox("txtMinimoOcurrencias"), "8");
+_setValue(_textbox("txtMaximoOcurrencias"), "25");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 3");
+_setSelected(_select("cmbPuntos"), "3");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "14");
+_setValue(_textbox("txtMaximoOcurrencias"), "50");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 4");
+_setSelected(_select("cmbPuntos"), "4");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "3");
+_setValue(_textbox("txtMinimoOcurrencias"), "45");
+_setValue(_textbox("txtMaximoOcurrencias"), "200");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 5");
+_setSelected(_select("cmbPuntos"), "5");
+_setSelected(_select("cmbPeriodo"), "Años");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "150");
+_setValue(_textbox("txtMaximoOcurrencias"), "875");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de frecuencia 4");
+_click(_list("container"));
+_click(_div("ER_Tipo de frecuencia 4"));
+_click($AGREGAR_FRECUENCIA);
+/* FRECUENCIA 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 1");
+_setSelected(_select("cmbPuntos"), "1");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "5");
+_setValue(_textbox("txtMinimoOcurrencias"), "4");
+_setValue(_textbox("txtMaximoOcurrencias"), "10");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 2");
+_setSelected(_select("cmbPuntos"), "2");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "15");
+_setValue(_textbox("txtMinimoOcurrencias"), "8");
+_setValue(_textbox("txtMaximoOcurrencias"), "25");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 3");
+_setSelected(_select("cmbPuntos"), "3");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "14");
+_setValue(_textbox("txtMaximoOcurrencias"), "50");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 4");
+_setSelected(_select("cmbPuntos"), "4");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "3");
+_setValue(_textbox("txtMinimoOcurrencias"), "45");
+_setValue(_textbox("txtMaximoOcurrencias"), "200");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 5");
+_setSelected(_select("cmbPuntos"), "5");
+_setSelected(_select("cmbPeriodo"), "Años");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "150");
+_setValue(_textbox("txtMaximoOcurrencias"), "875");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de frecuencia 5");
+_click(_list("container"));
+_click(_div("ER_Tipo de frecuencia 5"));
+_click($AGREGAR_FRECUENCIA);
+/* FRECUENCIA 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 1");
+_setSelected(_select("cmbPuntos"), "1");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "5");
+_setValue(_textbox("txtMinimoOcurrencias"), "4");
+_setValue(_textbox("txtMaximoOcurrencias"), "10");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 2");
+_setSelected(_select("cmbPuntos"), "2");
+_setSelected(_select("cmbPeriodo"), "Días");
+_setValue(_textbox("txtNumeroPeriodos"), "15");
+_setValue(_textbox("txtMinimoOcurrencias"), "8");
+_setValue(_textbox("txtMaximoOcurrencias"), "25");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 3");
+_setSelected(_select("cmbPuntos"), "3");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "14");
+_setValue(_textbox("txtMaximoOcurrencias"), "50");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 4");
+_setSelected(_select("cmbPuntos"), "4");
+_setSelected(_select("cmbPeriodo"), "Meses");
+_setValue(_textbox("txtNumeroPeriodos"), "3");
+_setValue(_textbox("txtMinimoOcurrencias"), "45");
+_setValue(_textbox("txtMaximoOcurrencias"), "200");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* FRECUENCIA 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Frecuencia 5");
+_setSelected(_select("cmbPuntos"), "5");
+_setSelected(_select("cmbPeriodo"), "Años");
+_setValue(_textbox("txtNumeroPeriodos"), "1");
+_setValue(_textbox("txtMinimoOcurrencias"), "150");
+_setValue(_textbox("txtMaximoOcurrencias"), "875");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

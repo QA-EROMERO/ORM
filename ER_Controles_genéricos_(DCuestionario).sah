@@ -1,0 +1,293 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("ER_Controles genéricos"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* CONTROL GENÉRICO 1 */
+/* TAB DETALLE */
+_click(_span("Detalle"));
+_click(_imageSubmitButton("btnRelacion"));
+_wait(3000);
+_setValue(_textbox("CONTROL"), "CT");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Control Genérico 1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Control Genérico 1");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Control Genérico 1");
+/* TAB VIGENCIA/COSTO */
+_click(_span("Vigencia/costo"));
+_setValue(_textbox("txtBeneficio_Economico"), "150000");
+_setValue(_textbox("txtCosto_Inicial"), "12000");
+_setValue(_textbox("txtCosto_Vigencia"), "45000");
+_setSelected(_select("cmbPrioridad_Implatacion"), "A");
+_setSelected(_select("cmbEstado_Control"), "Inadecuada");
+/* TAB CARACTERÍSTICA */
+_click(_span("Características[1]"));
+_click(_span("Asignación de valores"));
+_setSelected(_select("cmbCaracteristica3"), "ER_Valor 1");
+_click(_span("ER_Característica 1"));
+_click(_label("ER_Opción 1"));
+_click(_label("Sí"));
+_click(_label("ER_Opción 2[1]"));
+_click(_label("No[1]"));
+_click(_span("ER_Característica 2"));
+_click(_label("ER_Opción 3[2]"));
+_click(_label("No[2]"));
+_click(_label("ER_Opción 5[3]"));
+_click(_label("Sí[3]"));
+_click(_label("ER_Opción 8[4]"));
+_click(_label("No[4]"));
+/* TAB INFORMACIÓN ADICIONAL */
+_click(_span("Información adicional"));
+_setSelected(_select("cmbAsignacion"), "Asignado");
+_click(_textbox("txtRol"));
+_click(_imageSubmitButton("btnResponsable"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setSelected(_select("cmbPeriodicidad"), "Diario");
+_setSelected(_select("cmbImportancia"), "Muy importante");
+_setSelected(_select("cmbFuncionalidad"), "Inadecuada");
+_setValue(_textarea("txtReferencia_Documental"), "ER_Referencia documental");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* CONTROL GENÉRICO 2 */
+/* TAB DETALLE */
+_click(_span("Detalle"));
+_click(_imageSubmitButton("btnRelacion"));
+_wait(3000);
+_setValue(_textbox("CONTROL"), "CT");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Control Genérico 2");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Control Genérico 2");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Control Genérico 2");
+/* TAB VIGENCIA/COSTO */
+_click(_span("Vigencia/costo"));
+_setValue(_textbox("txtBeneficio_Economico"), "245000");
+_setValue(_textbox("txtCosto_Inicial"), "25000");
+_setValue(_textbox("txtCosto_Vigencia"), "60000");
+_setSelected(_select("cmbPrioridad_Implatacion"), "A");
+_setSelected(_select("cmbEstado_Control"), "Adecuada");
+/* TAB CARACTERÍSTICA */
+_click(_span("Características[1]"));
+_click(_span("Asignación de valores"));
+_setSelected(_select("cmbCaracteristica3"), "ER_Valor 1");
+_click(_span("ER_Característica 1"));
+_click(_label("ER_Opción 1"));
+_click(_label("Sí"));
+_click(_label("ER_Opción 2[1]"));
+_click(_label("No[1]"));
+_click(_span("ER_Característica 2"));
+_click(_label("ER_Opción 3[2]"));
+_click(_label("No[2]"));
+_click(_label("ER_Opción 5[3]"));
+_click(_label("Sí[3]"));
+_click(_label("ER_Opción 8[4]"));
+_click(_label("No[4]"));
+/* TAB INFORMACIÓN ADICIONAL */
+_click(_span("Información adicional"));
+_setSelected(_select("cmbAsignacion"), "Asignado");
+_click(_textbox("txtRol"));
+_click(_imageSubmitButton("btnResponsable"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setSelected(_select("cmbPeriodicidad"), "Semanal");
+_setSelected(_select("cmbImportancia"), "Importante");
+_setSelected(_select("cmbFuncionalidad"), "Adecuada");
+//_setValue(_textarea("txtReferencia_Documental"), "ER_Referencia documental");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* CONTROL GENÉRICO 3 */
+/* TAB DETALLE */
+_click(_span("Detalle"));
+_click(_imageSubmitButton("btnRelacion"));
+_wait(3000);
+_setValue(_textbox("CONTROL"), "CT");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Control Genérico 3");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Control Genérico 3");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Control Genérico 3");
+/* TAB VIGENCIA/COSTO */
+_click(_span("Vigencia/costo"));
+_setValue(_textbox("txtBeneficio_Economico"), "875000");
+_setValue(_textbox("txtCosto_Inicial"), "95000");
+_setValue(_textbox("txtCosto_Vigencia"), "428000");
+_setSelected(_select("cmbPrioridad_Implatacion"), "A");
+_setSelected(_select("cmbEstado_Control"), "Adecuada");
+/* TAB CARACTERÍSTICA */
+_click(_span("Características[1]"));
+_click(_span("Asignación de valores"));
+_setSelected(_select("cmbCaracteristica3"), "ER_Valor 1");
+_click(_span("ER_Característica 1"));
+_click(_label("ER_Opción 1"));
+_click(_label("Sí"));
+_click(_label("ER_Opción 2[1]"));
+_click(_label("No[1]"));
+_click(_span("ER_Característica 2"));
+_click(_label("ER_Opción 3[2]"));
+_click(_label("No[2]"));
+_click(_label("ER_Opción 5[3]"));
+_click(_label("Sí[3]"));
+_click(_label("ER_Opción 8[4]"));
+_click(_label("No[4]"));
+/* TAB INFORMACIÓN ADICIONAL */
+_click(_span("Información adicional"));
+_setSelected(_select("cmbAsignacion"), "Asignado");
+_click(_textbox("txtRol"));
+_click(_imageSubmitButton("btnResponsable"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setSelected(_select("cmbPeriodicidad"), "Quincenal");
+_setSelected(_select("cmbImportancia"), "Muy importante");
+_setSelected(_select("cmbFuncionalidad"), "Adecuada");
+_setValue(_textarea("txtReferencia_Documental"), "ER_Referencia documental");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* CONTROL GENÉRICO 4 */
+/* TAB DETALLE */
+_click(_span("Detalle"));
+_click(_imageSubmitButton("btnRelacion"));
+_wait(3000);
+_setValue(_textbox("CONTROL"), "CT");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Control Genérico 4");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Control Genérico 4");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Control Genérico 4");
+/* TAB VIGENCIA/COSTO */
+_click(_span("Vigencia/costo"));
+_setValue(_textbox("txtBeneficio_Economico"), "100000");
+_setValue(_textbox("txtCosto_Inicial"), "5000");
+_setValue(_textbox("txtCosto_Vigencia"), "23500");
+_setSelected(_select("cmbPrioridad_Implatacion"), "C");
+_setSelected(_select("cmbEstado_Control"), "Inadecuada");
+/* TAB CARACTERÍSTICA */
+_click(_span("Características[1]"));
+_click(_span("Asignación de valores"));
+_setSelected(_select("cmbCaracteristica3"), "ER_Valor 1");
+_click(_span("ER_Característica 1"));
+_click(_label("ER_Opción 1"));
+_click(_label("Sí"));
+_click(_label("ER_Opción 2[1]"));
+_click(_label("No[1]"));
+_click(_span("ER_Característica 2"));
+_click(_label("ER_Opción 3[2]"));
+_click(_label("No[2]"));
+_click(_label("ER_Opción 5[3]"));
+_click(_label("Sí[3]"));
+_click(_label("ER_Opción 8[4]"));
+_click(_label("No[4]"));
+/* TAB INFORMACIÓN ADICIONAL */
+_click(_span("Información adicional"));
+_setSelected(_select("cmbAsignacion"), "Asignado");
+_click(_textbox("txtRol"));
+_click(_imageSubmitButton("btnResponsable"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setSelected(_select("cmbPeriodicidad"), "Mensual");
+_setSelected(_select("cmbImportancia"), "Poco importante");
+_setSelected(_select("cmbFuncionalidad"), "Adecuada");
+_setValue(_textarea("txtReferencia_Documental"), "ER_Referencia documental");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* CONTROL GENÉRICO 5 */
+/* TAB DETALLE */
+_click(_span("Detalle"));
+_click(_imageSubmitButton("btnRelacion"));
+_wait(3000);
+_setValue(_textbox("CONTROL"), "CT");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Control Genérico 5");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Control Genérico 5");
+_setValue(_textarea("txtComentario"), "Comentario del ER_Control Genérico 5");
+/* TAB VIGENCIA/COSTO */
+_click(_span("Vigencia/costo"));
+_setValue(_textbox("txtBeneficio_Economico"), "125000");
+_setValue(_textbox("txtCosto_Inicial"), "5000");
+_setValue(_textbox("txtCosto_Vigencia"), "33500");
+_setSelected(_select("cmbPrioridad_Implatacion"), "B");
+_setSelected(_select("cmbEstado_Control"), "Adecuada");
+/* TAB CARACTERÍSTICA */
+_click(_span("Características[1]"));
+_click(_span("Asignación de valores"));
+_setSelected(_select("cmbCaracteristica3"), "ER_Valor 1");
+_click(_span("ER_Característica 1"));
+_click(_label("ER_Opción 1"));
+_click(_label("Sí"));
+_click(_label("ER_Opción 2[1]"));
+_click(_label("No[1]"));
+_click(_span("ER_Característica 2"));
+_click(_label("ER_Opción 3[2]"));
+_click(_label("No[2]"));
+_click(_label("ER_Opción 5[3]"));
+_click(_label("Sí[3]"));
+_click(_label("ER_Opción 8[4]"));
+_click(_label("No[4]"));
+/* TAB INFORMACIÓN ADICIONAL */
+_click(_span("Información adicional"));
+_setSelected(_select("cmbAsignacion"), "Asignado");
+_click(_textbox("txtRol"));
+_click(_imageSubmitButton("btnResponsable"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_setSelected(_select("cmbPeriodicidad"), "Mensual");
+_setSelected(_select("cmbImportancia"), "Poco importante");
+_setSelected(_select("cmbFuncionalidad"), "Adecuada");
+//_setValue(_textarea("txtReferencia_Documental"), "ER_Referencia documental");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

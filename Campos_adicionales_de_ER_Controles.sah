@@ -1,0 +1,51 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Campos adicionales de ER_Controles"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*ER_Campo adicional 1*/;
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional");
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 1 (Numérico)");
+_setSelected(_select("cmbTipoCampo"), "Numérico");
+_setValue(_textbox("txtLongitud"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*ER_Campo adicional 2*/;
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional");
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 2 (Alfanumérico)");
+_setSelected(_select("cmbTipoCampo"), "Alfanumérico");
+_setValue(_textbox("txtLongitud"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*ER_Campo adicional 3*/;
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional");
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 3 (Comentario)");
+_setSelected(_select("cmbTipoCampo"), "Comentario");
+_setValue(_textbox("txtLongitud"), "2000");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*ER_Campo adicional 4*/;
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional");
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 4 (Fecha)");
+_setSelected(_select("cmbTipoCampo"), "Fecha");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*ER_Campo adicional 5*/;
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional");
+_setValue(_textbox("txtDescripcion"), "ER_Campo adicional 5 (Sí-No)");
+_setSelected(_select("cmbTipoCampo"), "Si/no");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

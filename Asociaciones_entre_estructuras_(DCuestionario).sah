@@ -1,0 +1,43 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Asociaciones entre estructuras"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Asociación 2");
+/* ESTRUCTURA 1 */
+_click(_textbox("ESTRUCTURA1txt"));
+_click(_imageSubmitButton("BUSQUEDA1btn"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Estructura 1 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* ESTRUCTURA 2 */
+_click(_textbox("ESTRUCTURA2txt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Estructura 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

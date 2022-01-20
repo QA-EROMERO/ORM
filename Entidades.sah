@@ -1,0 +1,131 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Entidades"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+_click(_imageSubmitButton("btnSrcPrograma"));
+_wait(3000);
+_setValue(_textbox("PR-DESCRIPCION"), "Cuestionario");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtEntidad"), "ET_1");
+_setValue(_textbox("txtDescripcion"), "ER_Entidad 1");
+_click(_span("Campos adicionales[1]"));
+/*============ Campo adicionales ============*/
+/*==== Campo 1 ====*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "Datos adicionales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Campo Adicional 1 (Numérico)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*==== Campo 2 ====*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "Datos adicionales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Campo Adicional 2 (Alfanumérico)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*==== Campo 3 ====*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "Datos adicionales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Campo Adicional 3 (Comentario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*==== Campo 4 ====*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "Datos adicionales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Campo Adicional 4 (Fecha)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+/*==== Campo 5 ====*/
+_click(_imageSubmitButton("btnSrcPestanha"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "Datos adicionales");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcAdicional"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Campo Adicional 5 (Sí-No)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddCampo"));
+_wait(3000);
+_click(_span("Seguridad[1]"));
+_click(_checkbox("chkTodo"));
+_setSelected(_checkbox("chkTodo").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*==========================================================*/
+/*============ PERMISOS EN LA MATRIZ DE ACCESOS ============*/
+_click(_listItem("Matriz de accesos"));
+_setValue(_textbox("DESCRIPCION"), "ER_Administrador");
+_click(_div("ER_Administrador"));
+_doubleClick(_div("ER_Administrador"));
+_click(_image("Expand MENUS"));
+_wait(3000);
+_click(_image("Expand Parametrización"));
+_click(_image("Expand Cuestionarios"));
+_click(_image("Expand Cuestionario"));
+_click(_link("ER_Entidad 1"));
+_click(_submit("Autorizar nivel"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("Aceptar[1]"));
+_click(_span("Cerrar sesión"));
+_setValue(_textbox("usuario"), "EROMERO");
+_setValue(_password("clave"), "1234");
+_click(_submit("Ingresar"));
+/*==========================================================*/
+/*========== INGRESAR DATOS EN LA ENTIDAD CREADA ===========*/
+/* ESTA PARTE SE DEBE PROBAR EN EL MANTENIMIENTO DE CUESTIONARIO*/

@@ -1,0 +1,238 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+//_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/*=======================*/
+/*CARGA DEL ARCHIVO EXCEL*/
+/*=======================*/
+var $EXCEL = _readExcelFile("RIESGOS.xlsx");
+
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_CONTROLES = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+$RI = 0; // <----- VARIABLE PARA INDICAR EL CORRELATIVO DE RIESGO SEGÚN EL ARCHIVO EXCEL
+_wait(5000);
+_click(_listItem("ER_Riesgos"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+/* SELECCIONANDO RIESGO GENÉRICO */
+_click(_label("ER_Riesgos genérico"));
+_wait(5000);
+_setValue(_textbox("Descripción detallada"), $EXCEL[$RI]["ER_Riesgo Genérico"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_click(_imageSubmitButton("btnProceso"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION"), $EXCEL[$RI]["Detalle de Estructura"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/*TAB DATOS GENERALES*/
+_click(_span("Datos generales[1]"));
+_click(_imageSubmitButton("UUID_TIPOTRATAbtn"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION"), $EXCEL[$RI]["Tipo de Tratamiento"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_click(_imageSubmitButton("btnUnidad"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION"), $EXCEL[$RI]["Unidad de negocio"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_click(_imageSubmitButton("btnConsecuencia"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION"), $EXCEL[$RI]["Tipo de Consecuencia"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_click(_imageSubmitButton("PRODUCTObtn"));
+_wait(5000);
+_setValue(_textbox("CODIGO_DESCRIPCION"), $EXCEL[$RI]["Productos o Servicios"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_click(_imageSubmitButton("addPRODUCTObtn"));
+
+/*TAB FALLAS*/
+_click(_span("ER_Fallas"));
+_wait(3000);
+_click(_imageSubmitButton("btnFalla"));
+_wait(5000);
+_setValue(_textbox("A-DESCRIPCION"), $EXCEL[$RI]["Falla Genérica"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_click(_imageSubmitButton("Add2"));
+/*CONTROLES A FLLAS*/
+_click(_imageSubmitButton("EVALbtn1"));
+_wait(5000);
+_click(_span("Agregar[1]"));
+_wait(5000);
+_click(_imageSubmitButton("btnSrcControl"));
+_wait(5000);
+_setValue(_textbox("DETALLE"), $EXCEL[$RI]["Controles a Fallas"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_click(_label("Rol"));
+_click(_imageSubmitButton("btnSrcRolResponsable"));
+_wait(5000);
+_setValue(_textbox("NOMBRE"), $EXCEL[$RI]["Responsable del Control a Fallas"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_setSelected(_select("cmbEjecucionControl"), $EXCEL[$RI]["Ejecución del Control a Fallas"]);
+_setValue(_textarea("txtObservacionDiseño"), $EXCEL[$RI]["Observaciones frente al diseño del Control a Fallas"]);
+_click(_imageSubmitButton("btnSrcEstadoControl"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION[1]"), $EXCEL[$RI]["Estado de Control a Fallas"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_setSelected(_textbox("txtFechaCertificacion").value = $EXCEL[$RI]["Fecha de Certificación"]);
+/*TAB DATOS ADICIONALES DE CONTROLES A FALLAS*/
+_click(_span("Datos adicionales[1]"));
+_setValue(_textbox("TXT1"), $EXCEL[$RI]["ER_Campo adicional 1 (Numérico) - Controles a Fallas"]);
+_setValue(_textbox("TXT2"), $EXCEL[$RI]["ER_Campo adicional 2 (Alfanumérico) - Controles a Fallas"]);
+_setValue(_textarea("TXT3"), $EXCEL[$RI]["ER_Campo adicional 3 (Comentario) - Controles a Fallas"]);
+_setSelected(_textbox("TXF1").value=$EXCEL[$RI]["ER_Campo adicional 4 (Fecha) - Controles a Fallas"]);
+_setSelected(_select("CMB1"), $EXCEL[$RI]["ER_Campo adicional 5 (Sí-No) - Controles a Fallas"]);
+_click(_submit("Aceptar[1]"));
+_wait(3000);
+_click(_span("close[7]"));
+_wait(3000);
+_click(_span("close[5]"));
+_wait(3000);
+
+/*CONTROLES A RIESGOS*/
+_click(_imageSubmitButton("btnControl"));
+_wait(5000);
+_setValue(_textbox("DETALLE"), $EXCEL[$RI]["Controles a Riesgos"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_click(_imageSubmitButton("addControl"));
+_click(_label("Rol"));
+_click(_imageSubmitButton("btnSrcRolResponsable"));
+_wait(5000);
+_setValue(_textbox("NOMBRE"), $EXCEL[$RI]["Responsable del Control a Riesgos"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_setSelected(_select("cmbEjecucionControl"), $EXCEL[$RI]["Ejecución del Control a Riesgos"]);
+_setValue(_textarea("txtObservacionDiseño"), $EXCEL[$RI]["Observaciones frente al diseño del Control a Riesgos"]);
+_wait(3000);
+_click(_imageSubmitButton("btnSrcEstadoControl"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION"), $EXCEL[$RI]["Estado de Control a Riesgos"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_setSelected(_textbox("txtFechaCertificacion").value = $EXCEL[$RI]["Fecha de Certificación - Controles a Riesgos"]);
+/*DATOS ADICIONALES*/
+_click(_span("Datos adicionales[1]"));
+_click(3000);
+_setValue(_textbox("TXT1"), $EXCEL[$RI]["ER_Campo adicional 1 (Numérico) - Controles a Riesgos"]);
+_setValue(_textbox("TXT2"), $EXCEL[$RI]["ER_Campo adicional 2 (Alfanumérico) - Controles a Riesgos"]);
+_setValue(_textarea("TXT3"), $EXCEL[$RI]["ER_Campo adicional 3 (Comentario) - Controles a Riesgos"]);
+_setSelected(_textbox("TXF1").value=$EXCEL[$RI]["ER_Campo adicional 4 (Fecha) - Controles a Riesgos"]);
+_setSelected(_select("CMB1"), $EXCEL[$RI]["ER_Campo adicional 5 (Sí-No) - Controles a Riesgos"]);
+_click(_submit("Aceptar[1]"));
+_wait(5000);
+
+/*TAB EVALUACIÓN CUALITATIVA*/
+_click(_span("Evaluación cualitativa"));
+_setSelected(_select("ROMMDCODtxt"), $EXCEL[$RI]["Método de Medición"]);
+_setSelected(_select("ROTIMCODtxt"), $EXCEL[$RI]["Impacto Económico"]);
+_setSelected(_select("ROFRQCODtxt"), $EXCEL[$RI]["Tipo de Frecuencia"]);
+_setSelected(_select("ROTFRCOD1txt"), $EXCEL[$RI]["Frecuencia"]);
+_setSelected(_select("ROSOLCTRLcmb"), $EXCEL[$RI]["Solidez del conjunto de Controles"]);
+_setSelected(_select("RODISIMPcmb"), $EXCEL[$RI]["Disminuye impacto"]);
+_setSelected(_select("RODISPROBcmb"), $EXCEL[$RI]["Disminuye Probabilidad"]);
+
+/*TAB RESULTADO EVALUACIÓN*/
+_click(_span("Resultado evaluación"));
+_wait(3000);
+_setValue(_select("cmbImpacto_Informacion"), $EXCEL[$RI]["Tipo de Impacto"]);
+_setValue(_textbox("txtCriticidad2"), $EXCEL[$RI]["Criticidad"]);
+
+/*TAB COMENTARIOS*/
+_click(_span("Comentarios"));
+_wait(3000);
+_setValue(_textarea("ROESVCOMtxt"), $EXCEL[$RI]["Comentarios"]);
+_click(_imageSubmitButton("btnSoporte_ProbabilidadI"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION"), $EXCEL[$RI]["Soporte Probabilidad - Evaluación RI"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_setValue(_textarea("ROESVJUSFtxt"), $EXCEL[$RI]["Justificación Soporte Probabilidades - Evaluación RI"]);
+_click(_imageSubmitButton("btnSoporte_ImpactoI"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION"), $EXCEL[$RI]["Soporte Impacto - Evaluación RI"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_setValue(_textarea("ROESVJUSItxt"), $EXCEL[$RI]["Justificación Soporte Impacto - Evaluación RI"]);
+_click(_imageSubmitButton("btnSoporte_ProbabilidadR"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION"), $EXCEL[$RI]["Soporte Probabilidad - Coeficiente Multifactorial de Riesgo reputacional estimado ime"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_setValue(_textarea("ROESVJUSFRtxt"), $EXCEL[$RI]["Justificación Soporte Probabilidad - Coeficiente Multifactorial de Riesgo reputacional estimado ime"]);
+_click(_imageSubmitButton("btnSoporte_ImpactoR"));
+_wait(5000);
+_setValue(_textbox("DESCRIPCION"), $EXCEL[$RI]["Soporte Impacto - Coeficiente Multifactorial de Riesgo reputacional estimado ime"]);
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+_setValue(_textarea("ROESVJUSIRtxt"), $EXCEL[$RI]["Justificación Soporte Impacto - Coeficiente Multifactorial de Riesgo reputacional estimado ime"]);
+
+/*TAB DATOS ADICIONALES DEL RIESGO*/
+_click(_span("Datos adicionales"));
+_wait(3000);
+_setValue(_textbox(0, _near(_span("ER_Campo adicional 1 (Numérico)"))), $EXCEL[$RI]["ER_Campo adicional 1 (Numérico) - Riesgo"]);
+_setValue(_textbox(0, _near(_span("ER_Campo adicional 2 (Alfanumérico)"))), $EXCEL[$RI]["ER_Campo adicional 2 (Alfanumérico) - Riesgo"]);
+_setValue(_textarea(0, _near(_span("ER_Campo adicional 3 (Comentario)"))), $EXCEL[$RI]["ER_Campo adicional 3 (Comentario) - Riesgo"]);
+_setValue(_textbox(0, _near(_span("ER_Campo adicional 4 (Fecha)"))).value = $EXCEL[$RI]["ER_Campo adicional 4 (Fecha) - Riesgo"])
+_setSelected(_select(0, _near(_span("ER_Campo adicional 5 (Sí-No)"))), $EXCEL[$RI]["ER_Campo adicional 5 (Sí-No) - Riesgo"]);
+
+/*GUARDAR EL RIESGO*/
+_click(_submit("Aceptar"));
+_wait(5000);

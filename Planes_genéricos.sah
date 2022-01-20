@@ -1,0 +1,89 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Planes genéricos"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* ER_PLAN GENÉRICO 1 */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("PLANG"), "PL");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "Objetivo del ER_Plan Genérico 1");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Plan Genérico 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_PLAN GENÉRICO 2 */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("PLANG"), "PL");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "Objetivo del ER_Plan Genérico 2");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Plan Genérico 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_PLAN GENÉRICO 3 */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("PLANG"), "PL");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "Objetivo del ER_Plan Genérico 3");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Plan Genérico 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_PLAN GENÉRICO 4 */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("PLANG"), "PL");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "Objetivo del ER_Plan Genérico 4");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Plan Genérico 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_PLAN GENÉRICO 5 */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("PLANG"), "PL");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "Objetivo del ER_Plan Genérico 5");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Plan Genérico 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

@@ -1,0 +1,156 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_CLASIFICADORES = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Tipos de clasificación"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de clasificación 1");
+_setValue(_textbox("txtNivel"), "##.##");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de clasificación 2");
+_setValue(_textbox("txtNivel"), "##.##.##");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de clasificación 3");
+_setValue(_textbox("txtNivel"), "#.##.###");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*======================= CLASIFICADORES ==========================*/
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de clasificación 1");
+_click(_list("container"));
+_click(_div("ER_Tipo de clasificación 1"));
+_click($AGREGAR_CLASIFICADORES);
+/* CLASIFICADOR 1 */
+_setValue(_textbox("txtCodigo"), "01");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1");
+_setValue(_textbox("txtCodigoInterno"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.1 */
+_setValue(_textbox("txtCodigo"), "0101");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.1");
+_setValue(_textbox("txtCodigoInterno"), "1.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.2 */
+_setValue(_textbox("txtCodigo"), "0102");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.2");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.2");
+_setValue(_textbox("txtCodigoInterno"), "1.2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.3 */
+_setValue(_textbox("txtCodigo"), "0103");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.3");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.3");
+_setValue(_textbox("txtCodigoInterno"), "1.3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de clasificación 2");
+_click(_list("container"));
+_click(_div("ER_Tipo de clasificación 2"));
+_click($AGREGAR_CLASIFICADORES);
+/* CLASIFICADOR 1 */
+_setValue(_textbox("txtCodigo"), "01");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1");
+_setValue(_textbox("txtCodigoInterno"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.1 */
+_setValue(_textbox("txtCodigo"), "0101");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.1");
+_setValue(_textbox("txtCodigoInterno"), "1.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.1.1 */
+_setValue(_textbox("txtCodigo"), "010101");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.1.1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.1.1");
+_setValue(_textbox("txtCodigoInterno"), "1.1.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.1.2 */
+_setValue(_textbox("txtCodigo"), "010102");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.1.2");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.1.2");
+_setValue(_textbox("txtCodigoInterno"), "1.1.2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.1.3 */
+_setValue(_textbox("txtCodigo"), "010103");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.1.3");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.1.3");
+_setValue(_textbox("txtCodigoInterno"), "1.1.3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 3 */
+_setValue(_textbox("DESCRIPCION"), "ER_Tipo de clasificación 3");
+_click(_list("container"));
+_click(_div("ER_Tipo de clasificación 3"));
+_click($AGREGAR_CLASIFICADORES);
+/* CLASIFICADOR 1 */
+_setValue(_textbox("txtCodigo"), "1");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1");
+_setValue(_textbox("txtCodigoInterno"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.1 */
+_setValue(_textbox("txtCodigo"), "101");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.1");
+_setValue(_textbox("txtCodigoInterno"), "1.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.1.1 */
+_setValue(_textbox("txtCodigo"), "101001");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.1.1");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.1.1");
+_setValue(_textbox("txtCodigoInterno"), "1.1.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.1.2 */
+_setValue(_textbox("txtCodigo"), "101002");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.1.2");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.1.2");
+_setValue(_textbox("txtCodigoInterno"), "1.1.2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* CLASIFICADOR 1.1.3 */
+_setValue(_textbox("txtCodigo"), "101003");
+_setValue(_textbox("txtDescripcion"), "ER_Clasificador 1.1.3");
+_setValue(_textarea("txtDetalle"), "Detalle del ER_Clasificador 1.1.3");
+_setValue(_textbox("txtCodigoInterno"), "1.1.3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

@@ -1,0 +1,49 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("División Responsable de la Pérdida"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "División Responsable de la Pérdida 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+/* REGISTRO 2 */
+_setValue(_textbox("txtDescripcion"), "División Responsable de la Pérdida 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+/* REGISTRO 3 */
+_setValue(_textbox("txtDescripcion"), "División Responsable de la Pérdida 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+/* REGISTRO 4 */
+_setValue(_textbox("txtDescripcion"), "División Responsable de la Pérdida 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+/* REGISTRO 5 */
+_setValue(_textbox("txtDescripcion"), "División Responsable de la Pérdida 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

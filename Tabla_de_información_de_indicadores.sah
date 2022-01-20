@@ -1,0 +1,51 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_CAMPOS_DE_TABLAS = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Tabla de información de indicadores"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_click(_textbox("txtTabla"));
+_click(_imageSubmitButton("btnSrcTabla"));
+_wait(3000);
+_setValue(_textbox("name"), "ROT_EVENTO_PERDIDA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Tabla Eventos Pérdida");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* CAMPOS DE TABLAS */
+_setValue(_textbox("DESCRIPCION"), "ER_Tabla Eventos Pérdida");
+_click(_list("container"));
+_click(_div("ER_Tabla Eventos Pérdida"));
+_click($AGREGAR_CAMPOS_DE_TABLAS);
+_click(_textbox("txtCampo"));
+_click(_imageSubmitButton("btnSrcCampo"));
+_wait(3000);
+_setValue(_textbox("COLUMN_NAME"), "CODIGO");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtDescripcion"), "ER_Campo Código");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

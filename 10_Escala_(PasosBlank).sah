@@ -1,0 +1,711 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_RANGO_DE_ESCALA = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Escala"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 1 (Estándar)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 1 (Estándar)");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 1 (Estándar)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 2 (Estándar)");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 3 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 1 (Estándar)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 3 (Estándar)");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 4 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 1 (Estándar)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 4 (Estándar)");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 5 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 1 (Estándar)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 5 (Estándar)");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*========================================================================*/
+/*============= PARA LA DIMENSIÓN ER_Dimensión 2 (Cuestionario)===========*/
+/*========================================================================*/
+/* REGISTRO 1 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 1 (Cuestionario)");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 2 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 2 (Cuestionario)");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 3 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 3 (Cuestionario)");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 4 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 4 (Cuestionario)");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 5 */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_textbox("UUID_NODO_SEGURIDADtxt"));
+_click(_imageSubmitButton("UUID_NODO_SEGURIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Guatemala");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("DESCRIPCIONtxt"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Escala 5 (Cuestionario)");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* CERRAR SESIÓN Y VOLVERSE A AUTENTICAR */
+_click(_span("Cerrar sesión"));
+_click(_textbox("usuario"));
+_setValue(_textbox("usuario"), "EROMERO");
+_setValue(_password("clave"), "1234");
+_click(_submit("Ingresar"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+_click(_listItem("Escala"));
+/*========================================================================*/
+/*======================== RANGOS DE ESCALA ==============================*/
+/*========================================================================*/
+/*=============== PARA LA DIMENSIÓN ER_Dimensión 1 (Estándar)=============*/
+/*========================================================================*/
+/* REGISTRO 1 */
+_click(_textbox("DESCRIPCION"));
+_click(_textbox("DESCRIPCION"));
+_click(_textbox("DESCRIPCION"));
+_click(_textbox("DESCRIPCION"));
+_click(_textbox("DESCRIPCION"));
+_click(_textbox("DESCRIPCION"));
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 1 (Estándar)");
+_click(_list("container"));
+_click(_div("ER_Escala 1 (Estándar)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 2 (Estándar)");
+_click(_list("container"));
+_click(_div("ER_Escala 2 (Estándar)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 3 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 3 (Estándar)");
+_click(_list("container"));
+_click(_div("ER_Escala 3 (Estándar)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 4 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 4 (Estándar)");
+_click(_list("container"));
+_click(_div("ER_Escala 4 (Estándar)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 5 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 5 (Estándar)");
+_click(_list("container"));
+_click(_div("ER_Escala 5 (Estándar)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*========================================================================*/
+/*============= PARA LA DIMENSIÓN ER_Dimensión 2 (Cuestionario)===========*/
+/*========================================================================*/
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 1 (Cuestionario)");
+_click(_list("container"));
+_click(_div("ER_Escala 1 (Cuestionario)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 2 (Cuestionario)");
+_click(_list("container"));
+_click(_div("ER_Escala 2 (Cuestionario)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 3 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 3 (Cuestionario)");
+_click(_list("container"));
+_click(_div("ER_Escala 3 (Cuestionario)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 4 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 4 (Cuestionario)");
+_click(_list("container"));
+_click(_div("ER_Escala 4 (Cuestionario)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 5 */
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 5 (Cuestionario)");
+_click(_list("container"));
+_click(_div("ER_Escala 5 (Cuestionario)"));
+_click($AGREGAR_RANGO_DE_ESCALA);
+/* RANGO DE ESCALA 1 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 1");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "0.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 2 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 2");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "1.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 3 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 3");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "2.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 4 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 4");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "3.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RANGO DE ESCALA 5 */
+_setValue(_textbox("DESCRIPCIONRANGOtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("DESCRIPCION_CORTAtxt"), "ER_Rango de Escala 5");
+_setValue(_textbox("NIVEL_INFERIORtxt"), "4.01");
+_setValue(_textbox("NIVEL_SUPERIORtxt"), "5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

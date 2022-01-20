@@ -1,0 +1,76 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("1_Autenticación_PLUS_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Usuarios"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_wait(5000);
+_click(_imageSubmitButton("btnSrcRol"));
+_wait(3000);
+_setValue(_textbox("NOMBRE[1]"), "Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcOrga"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[4]"), "Organización");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcPuesto"));
+_wait(3000);
+_setValue(_textbox("NOMBRE[1]"), "Subgerente");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcDimension"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[4]"), "Riesgo Operativo");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcEstructura"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[4]"), "Procesos");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSrcDepartamento"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[4]"), "Cumplimiento");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setSelected(_checkbox("chkActivo").checked = true);
+_setValue(_textbox("txtUsuario"), "EROMERO");
+_setSelected(_select("cmbSexo"), "Masculino");
+_setValue(_textbox("txtPrimerNombre"), "ERICK");
+_setValue(_textbox("txtSegundoNombre"), "ESTUARDO");
+_setValue(_textbox("txtPrimerApellido"), "ROMERO");
+_setValue(_textbox("txtSegundoApellido"), "HERNÁNDEZ");
+_click(_textbox("txtFechaIngreso"));
+_click(_link("15"));
+_click(_textbox("txtFechaNacimiento"));
+_click(_link("14"));
+_setValue(_textbox("txtCorreo"), "EROMERO@PLUSTI.COM");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+_click(_span("Cerrar sesión"));
+_setValue(_textbox("usuario"), "EROMERO");
+_wait(120000); /* 2:00 */

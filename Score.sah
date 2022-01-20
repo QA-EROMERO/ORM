@@ -1,0 +1,130 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Score"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*================================================================*/
+/*=================== AGREGANDO REGISTROS ========================*/
+/*================================================================*/
+/* REGISTRO 1*/
+/*FACTOR ER_CLIENTES*/
+_setSelected(_select("cmbDescripcion"), "ER_Clientes");
+_setValue(_textbox("txtScoreBD"), "PERSONA");
+_setValue(_textbox("txtValor_Maximo"), "240");
+/*CAMPO 1*/
+_setValue(_textbox("txtDescripcion_Factor"), "Conocimiento del Cliente");
+_setValue(_textbox("txtFactorBD"), "CONOCIMIENTO");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 2*/
+_setValue(_textbox("txtDescripcion_Factor"), "Actividad Económica");
+_setValue(_textbox("txtFactorBD"), "ACTIVIDAD");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 3*/
+_setValue(_textbox("txtDescripcion_Factor"), "Nacionalidad - Constitución");
+_setValue(_textbox("txtFactorBD"), "NACIONALIDAD");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 4*/
+_setValue(_textbox("txtDescripcion_Factor"), "PEP - Listas Internas - Relación Cliente");
+_setValue(_textbox("txtFactorBD"), "PEPLISTAS");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 2*/
+/*FACTOR ER_PRODUCTOS*/
+_setSelected(_select("cmbDescripcion"), "ER_Productos");
+_setValue(_textbox("txtScoreBD"), "PRODUCTO");
+_setValue(_textbox("txtValor_Maximo"), "240");
+/*CAMPO 1*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE COMBINACIÓN");
+_setValue(_textbox("txtFactorBD"), "COMBINACION");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 2*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE CANTIDAD");
+_setValue(_textbox("txtFactorBD"), "CANTIDAD");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 3*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE NATURALEZA");
+_setValue(_textbox("txtFactorBD"), "NATURALEZA");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 3*/
+/*FACTOR ER_JURISDICCIONES*/
+_setSelected(_select("cmbDescripcion"), "ER_Jurisdicciones");
+_setValue(_textbox("txtScoreBD"), "JURISDICCION");
+_setValue(_textbox("txtValor_Maximo"), "240");
+/*CAMPO 1*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE REGIONAPERTURA");
+_setValue(_textbox("txtFactorBD"), "REGIONAPERTURA");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 2*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE REGIONALTOR");
+_setValue(_textbox("txtFactorBD"), "REGIONALTOR");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 3*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE PAISALTOR");
+_setValue(_textbox("txtFactorBD"), "PAISALTOR");
+_click(_imageSubmitButton("btnAdd"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 4*/
+/*FACTOR ER_CANALES*/
+_setSelected(_select("cmbDescripcion"), "ER_Canales");
+_setValue(_textbox("txtScoreBD"), "CANALES");
+_setValue(_textbox("txtValor_Maximo"), "240");
+/*CAMPO 1*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE CANALVINCULACION");
+_setValue(_textbox("txtFactorBD"), "CANALVINCULACION");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 2*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE PROMEDIO");
+_setValue(_textbox("txtFactorBD"), "PROMEDIO");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 3*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE INUSUALIDAD");
+_setValue(_textbox("txtFactorBD"), "INUSUALIDAD");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 4*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE JURISDICCIONPROMEDIO");
+_setValue(_textbox("txtFactorBD"), "JURISDICCIONPROMEDIO");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 5*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE COMPORTAMIENTOCANAL");
+_setValue(_textbox("txtFactorBD"), "COMPORTAMIENTOCANAL");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+/*CAMPO 6*/
+_setValue(_textbox("txtDescripcion_Factor"), "DESCRIPCIÓN DE INHERENTE");
+_setValue(_textbox("txtFactorBD"), "INHERENTE");
+_click(_imageSubmitButton("btnAdd"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);

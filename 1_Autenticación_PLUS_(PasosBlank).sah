@@ -1,0 +1,18 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$Usuario = 'PLUS';
+$Contraseña = '1234';
+/* AUTENTICACIÓN */
+_setValue(_textbox("usuario"), $Usuario);
+_setValue(_password("clave"), $Contraseña);
+_click(_submit("Ingresar"));
+_wait(7000);

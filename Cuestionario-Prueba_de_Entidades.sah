@@ -1,0 +1,73 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_IMPACTO_ECONOMICO = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Cuestionario"));
+_wait(5000);
+/*================================================================*/
+/*============= AGREGAR ENTIDAD - CUESTIONARIO 1 =================*/
+/*================================================================*/
+_setValue(_textbox("DESCRIPCION"), "ER_Cuestionario 1");
+_click(_list("container"));
+_click(_div("ER_Cuestionario 1"));
+_click($AGREGAR_IMPACTO_ECONOMICO);
+_setValue(_textbox("txtDescripcion"), "ER_Registro 1");
+_setSelected(_select("cmbC0001"), "ER_V1");
+_setSelected(_select("cmbC0002"), "ER_V4");
+_setValue(_textarea("txtC0003"), "ER_CAMPO ADICIONAL 3");
+/*CAMPO FECHA*/
+_click(_textbox("txtC0004"));
+_click(_link("27"));
+_setSelected(_select("cmbC0005"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*================================================================*/
+/*============= AGREGAR ENTIDAD - CUESTIONARIO 2 =================*/
+/*================================================================*/
+_setValue(_textbox("DESCRIPCION"), "ER_Cuestionario 2");
+_click(_list("container"));
+_click(_div("ER_Cuestionario 2"));
+_click($AGREGAR_IMPACTO_ECONOMICO);
+_setValue(_textbox("txtDescripcion"), "ER_Registro 1");
+_setSelected(_select("cmbC0001"), "ER_V1");
+_setSelected(_select("cmbC0002"), "ER_V4");
+_setValue(_textarea("txtC0003"), "ER_CAMPO ADICIONAL 3");
+/*CAMPO FECHA*/
+_click(_textbox("txtC0004"));
+_click(_link("27"));
+_setSelected(_select("cmbC0005"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*================================================================*/
+/*============= AGREGAR ENTIDAD - CUESTIONARIO 3 =================*/
+/*================================================================*/
+_setValue(_textbox("DESCRIPCION"), "ER_Cuestionario 3");
+_click(_list("container"));
+_click(_div("ER_Cuestionario 3"));
+_click($AGREGAR_IMPACTO_ECONOMICO);
+_setValue(_textbox("txtDescripcion"), "ER_Registro 1");
+_setSelected(_select("cmbC0001"), "ER_V1");
+_setSelected(_select("cmbC0002"), "ER_V4");
+_setValue(_textarea("txtC0003"), "ER_CAMPO ADICIONAL 3");
+/*CAMPO FECHA*/
+_click(_textbox("txtC0004"));
+_click(_link("27"));
+_setSelected(_select("cmbC0005"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+_setValue(_textbox("DESCRIPCION"), "");
+_click(_div("ER_Cuestionario 3"));

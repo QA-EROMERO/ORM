@@ -1,0 +1,165 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_ROLES = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+$AGREGAR_USUARIOS = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[2]");
+$TAB_AUROTIRZACION_DE_ROLES_PARA_EVENTOS_PERDIDA = _link("Autorizacion De Roles Para Eventos Perdida");
+$TAB_AUTORIZACION_DE_USUARIOS_PARA_EVENTOS_PERDIDA = _link("Autorizacion De Usuarios Para Eventos Perdida");
+_click(_listItem("Unidades de negocio"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtCodigo").value = "01");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 1");
+_setValue(_textbox("txtCodigoInterno"), "1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_setValue(_textbox("txtCodigo").value = "01.01");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 1.1");
+_setValue(_textbox("txtCodigoInterno"), "1.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_setValue(_textbox("txtCodigo").value = "01.01.01");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 1.1.1");
+_setValue(_textbox("txtCodigoInterno"), "1.1.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 4 */
+_setValue(_textbox("txtCodigo").value = "01.01.02");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 1.1.2");
+_setSelected(_checkbox("ckTercerizada").checked = true);
+_setValue(_textbox("txtCodigoInterno"), "1.1.2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 5 */
+_setValue(_textbox("txtCodigo").value = "01.01.03");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 1.1.3");
+_setSelected(_checkbox("ckTercerizada").checked = true);
+_setValue(_textbox("txtCodigoInterno"), "1.1.3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 6 */
+_setValue(_textbox("txtCodigo"), "02");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 2");
+_setValue(_textbox("txtCodigoInterno"), "2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 7 */
+_setValue(_textbox("txtCodigo").value = "02.01");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 2.1");
+_setValue(_textbox("txtCodigoInterno"), "2.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 8 */
+_setValue(_textbox("txtCodigo").value = "02.01.01");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 2.1.1");
+_setValue(_textbox("txtCodigoInterno"), "2.1.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 9 */
+_setValue(_textbox("txtCodigo").value = "02.01.02");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 2.1.2");
+_setSelected(_checkbox("ckTercerizada").checked = true);
+_setValue(_textbox("txtCodigoInterno"), "2.1.2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 10 */
+_setValue(_textbox("txtCodigo").value = "02.01.03");
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de negocio 2.1.3");
+_setSelected(_checkbox("ckTercerizada").checked = true);
+_setValue(_textbox("txtCodigoInterno"), "2.1.3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/*=================================================================*/
+/*========= AUTORIZACIÓN DE ROLES PARA EVENTOS DE PÉRDIDA =========*/
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de negocio 1");
+_click(_list("container"));
+_click(_div("ER_Unidad de negocio 1"));
+_click($TAB_AUROTIRZACION_DE_ROLES_PARA_EVENTOS_PERDIDA);
+_click($AGREGAR_ROLES);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de negocio 2");
+_click(_list("container"));
+_click(_div("ER_Unidad de negocio 2"));
+_click($TAB_AUROTIRZACION_DE_ROLES_PARA_EVENTOS_PERDIDA);
+_click($AGREGAR_ROLES);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("NOMBRE[1]"));
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/*=================================================================*/
+/*========= AUTORIZACIÓN DE USUARIOS PARA EVENTOS DE PÉRDIDA =========*/
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de negocio 1");
+_click(_list("container"));
+_click(_div("ER_Unidad de negocio 1"));
+_click($TAB_AUTORIZACION_DE_USUARIOS_PARA_EVENTOS_PERDIDA);
+_click($AGREGAR_USUARIOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("USUARIO[1]"));
+_setValue(_textbox("USUARIO[1]"), "EROMERO");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de negocio 2");
+_click(_list("container"));
+_click(_div("ER_Unidad de negocio 2"));
+_click($TAB_AUTORIZACION_DE_USUARIOS_PARA_EVENTOS_PERDIDA);
+_click($AGREGAR_USUARIOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_click(_textbox("USUARIO[1]"));
+_setValue(_textbox("USUARIO[1]"), "EROMERO");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

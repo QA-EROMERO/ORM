@@ -1,0 +1,488 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_CONTROLES_SUGERIDOS = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("ER_Fallas genéricas"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* ER_FALLA GENÉRICA 1 */
+/* TAB DATOS GENERALES */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("FALLA"), "FA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "ER_Falla Genérica 1");
+_click(_textbox("UUID_CAUSA_EVENTOtxt"));
+_click(_imageSubmitButton("UUID_CAUSA_EVENTObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Factor de Riesgo 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB CLASIFICADORES */
+/* CLASIFICADOR 1 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 2 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 3 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_FALLA GENÉRICA 2 */
+/* TAB DATOS GENERALES */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("FALLA"), "FA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "ER_Falla Genérica 2");
+_click(_textbox("UUID_CAUSA_EVENTOtxt"));
+_click(_imageSubmitButton("UUID_CAUSA_EVENTObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Factor de Riesgo 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB CLASIFICADORES */
+/* CLASIFICADOR 1 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 2 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 3 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_FALLA GENÉRICA 3 */
+/* TAB DATOS GENERALES */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("FALLA"), "FA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "ER_Falla Genérica 3");
+_click(_textbox("UUID_CAUSA_EVENTOtxt"));
+_click(_imageSubmitButton("UUID_CAUSA_EVENTObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Factor de Riesgo 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB CLASIFICADORES */
+/* CLASIFICADOR 1 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 2 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 3 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_FALLA GENÉRICA 4 */
+/* TAB DATOS GENERALES */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("FALLA"), "FA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "ER_Falla Genérica 4");
+_click(_textbox("UUID_CAUSA_EVENTOtxt"));
+_click(_imageSubmitButton("UUID_CAUSA_EVENTObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Factor de Riesgo 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB CLASIFICADORES */
+/* CLASIFICADOR 1 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 2 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 3 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_FALLA GENÉRICA 5 */
+/* TAB DATOS GENERALES */
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("FALLA"), "FA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCIONtxt"), "ER_Falla Genérica 5");
+_click(_textbox("UUID_CAUSA_EVENTOtxt"));
+_click(_imageSubmitButton("UUID_CAUSA_EVENTObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Factor de Riesgo 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB CLASIFICADORES */
+/* CLASIFICADOR 1 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 2 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+/* CLASIFICADOR 3 */
+_click(_span("Clasificadores"));
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipo de clasificación 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAgregar"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/*==================================================================*/
+/*================ AGREGANDO CONTROLES SUGERIDOS ===================*/
+/* ER_FALLA GENÉRICA 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Falla Genérica 1");
+_click(_list("container"));
+_click(_div("ER_Falla Genérica 1"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Control Genérico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_FALLA GENÉRICA 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Falla Genérica 2");
+_click(_list("container"));
+_click(_div("ER_Falla Genérica 2"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Control Genérico 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_FALLA GENÉRICA 3 */
+_setValue(_textbox("DESCRIPCION"), "ER_Falla Genérica 3");
+_click(_list("container"));
+_click(_div("ER_Falla Genérica 3"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Control Genérico 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_FALLA GENÉRICA 4 */
+_setValue(_textbox("DESCRIPCION"), "ER_Falla Genérica 4");
+_click(_list("container"));
+_click(_div("ER_Falla Genérica 4"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Control Genérico 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_FALLA GENÉRICA 5 */
+_setValue(_textbox("DESCRIPCION"), "ER_Falla Genérica 5");
+_click(_list("container"));
+_click(_div("ER_Falla Genérica 5"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Control Genérico 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

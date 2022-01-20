@@ -1,0 +1,36 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Centros de costo"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*===========================================================*/
+/*================= AGREGANDO REGISTROS =====================*/
+/*===========================================================*/
+_setValue(_textbox("txtDescripcion"), "ER_Centros de costo 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtDescripcion"), "ER_Centros de costo 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtDescripcion"), "ER_Centros de costo 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtDescripcion"), "ER_Centros de costo 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtDescripcion"), "ER_Centros de costo 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

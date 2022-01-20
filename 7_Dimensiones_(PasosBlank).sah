@@ -1,0 +1,84 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_ROL = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+
+_click(_listItem("Dimensiones"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_click(_span("Dimensión"));
+_setValue(_textbox("txtDescripcion"), "ER_Dimensión 1 (Estándar)");
+_click(_span("Estructuras primarias"));
+_setSelected(_select("dlEstructuraPrimaria"), "ER_Estructura 1 (Estándar)");
+_setValue(_textbox("txtPorcentaje"), "50");
+_click(_submit("Agregar"));
+_setSelected(_select("dlEstructuraPrimaria"), "ER_Estructura 2 (Estándar)");
+_setValue(_textbox("txtPorcentaje"), "50");
+_click(_submit("Agregar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_click(_span("Dimensión"));
+_setValue(_textbox("txtDescripcion"), "ER_Dimensión 2 (Cuestionario)");
+_click(_span("Estructuras primarias"));
+_setSelected(_select("dlEstructuraPrimaria"), "ER_Estructura 1 (Cuestionario)");
+_setValue(_textbox("txtPorcentaje"), "50");
+_click(_submit("Agregar"));
+_setSelected(_select("dlEstructuraPrimaria"), "ER_Estructura 2 (Cuestionario)");
+_setValue(_textbox("txtPorcentaje"), "50");
+_click(_submit("Agregar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*===================== ROLES ========================*/
+/* DIMENSION 1 */
+/* ROL 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Dimensión 1 (Estándar)");
+_click(_list("container"));
+_click(_div("ER_Dimensión 1 (Estándar)"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("NOMBRE[1]"), "Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+/* ROL 2 */
+_click(_span("close[3]"));
+/* DIMENSION 2 */
+/* ROL 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Dimensión 2 (Cuestionario)");
+_click(_list("container"));
+_click(_div("ER_Dimensión 2 (Cuestionario)"));
+//_click(_span("ui-button-text[69]"));
+//_click(_span("ui-button-text[33]"));
+_click($AGREGAR_ROL); // _span(293)
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("NOMBRE[1]"), "Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

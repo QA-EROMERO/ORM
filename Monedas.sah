@@ -1,0 +1,39 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Monedas"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 2 */
+_setValue(_textbox("txtDivisa"), "ER_Dolar");
+_setValue(_textbox("txtDescripcion"), "ER_Dolar");
+_click(_span("ui-icon ui-icon-triangle-1-n"));
+_setValue(_textbox("txtTasa"), "7.75000");
+_setValue(_textbox("txtSigno"), "$");
+_setSelected(_select("cmbOperacion"), "Multiplicación");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_setValue(_textbox("txtDivisa"), "ER_Euro");
+_setValue(_textbox("txtDescripcion"), "ER_Euro");
+_click(_span("ui-icon ui-icon-triangle-1-n"));
+_setValue(_textbox("txtTasa"), "11.00000");
+_setValue(_textbox("txtSigno"), "€");
+_setSelected(_select("cmbOperacion"), "Multiplicación");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

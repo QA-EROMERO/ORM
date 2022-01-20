@@ -1,0 +1,102 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Tipo de consecuencia"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_click(_span("Detalle"));
+_setValue(_textarea("DESCRIPCIONtxt"), "Descripción del ER_Tipo de consecuencia 1");
+_setValue(_textarea("DETALLEtxt"), "Detalle del ER_Tipo de consecuencia 1");
+_click(_span("Cuestionarios[1]"));
+/* CUESTIONARIO 1 */
+_click(_imageSubmitButton("UUID_CUESTIONARIObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Cuestionario 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtPorcentaje"), "100");
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_click(_span("Detalle"));
+_setValue(_textarea("DESCRIPCIONtxt"), "Descripción del ER_Tipo de consecuencia 2");
+_setValue(_textarea("DETALLEtxt"), "Detalle del ER_Tipo de consecuencia 2");
+_click(_span("Cuestionarios[1]"));
+/* CUESTIONARIO 1 */
+_click(_imageSubmitButton("UUID_CUESTIONARIObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Cuestionario 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtPorcentaje"), "50");
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+/* CUESTIONARIO 2 */
+_click(_imageSubmitButton("UUID_CUESTIONARIObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Cuestionario 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtPorcentaje"), "50");
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_click(_span("Detalle"));
+_setValue(_textarea("DESCRIPCIONtxt"), "Descripción del ER_Tipo de consecuencia 3");
+_setValue(_textarea("DETALLEtxt"), "Detalle del ER_Tipo de consecuencia 3");
+_click(_span("Cuestionarios[1]"));
+/* CUESTIONARIO 1 */
+_click(_imageSubmitButton("UUID_CUESTIONARIObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Cuestionario 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtPorcentaje"), "20");
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+/* CUESTIONARIO 2 */
+_click(_imageSubmitButton("UUID_CUESTIONARIObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Cuestionario 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtPorcentaje"), "20");
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+/* CUESTIONARIO 3 */
+_click(_imageSubmitButton("UUID_CUESTIONARIObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Cuestionario 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtPorcentaje"), "60");
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

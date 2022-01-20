@@ -1,0 +1,86 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Tipo de pérdida"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida Económica 1");
+_click(_label("Económica"));
+_setSelected(_checkbox("ckbValidacionEspecial").checked=false);
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida Económica 2");
+_click(_label("Económica"));
+_setSelected(_checkbox("ckbValidacionEspecial").checked=false);
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida Económica 3");
+_click(_label("Económica"));
+_setSelected(_checkbox("ckbValidacionEspecial").checked=false);
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 4 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida Económica 4 (Afecta Pérdidas y Ganancias)");
+_click(_label("Económica"));
+_setSelected(_checkbox("ckbValidacionEspecial").checked=true);
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 5 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida Económica 5 (Afecta Pérdidas y Ganancias)");
+_click(_label("Económica"));
+_setSelected(_checkbox("ckbValidacionEspecial").checked=true);
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 6 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida No Económica 1");
+_click(_label("No económica"));
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 7 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida No Económica 2");
+_click(_label("No económica"));
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 8 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida No Económica 3");
+_click(_label("No económica"));
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 9 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida No Económica 4");
+_click(_label("No económica"));
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 10 */
+_wait(3000);
+_setValue(_textbox("txtDescripcion"), "ER_Tipo de pérdida No Económica 5");
+_click(_label("No económica"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

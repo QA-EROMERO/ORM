@@ -1,0 +1,63 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+_click(_listItem("Impacto del Evento"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*================================================================*/
+/*============= AGREGAR ENTIDAD - CUESTIONARIO 1 =================*/
+/*================================================================*/
+/* REGISTRO 1 */
+_click(_textbox("txtCodigo"));
+_setValue(_textbox("txtCodigo"), "1");
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto del Evento 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 2 */
+_click(_textbox("txtCodigo"));
+_setValue(_textbox("txtCodigo"), "2");
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto del Evento 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 3 */
+_click(_textbox("txtCodigo"));
+_setValue(_textbox("txtCodigo"), "3");
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto del Evento 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 4 */
+_click(_textbox("txtCodigo"));
+_setValue(_textbox("txtCodigo"), "4");
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto del Evento 4");
+_click(_label("Pérdida Potencial"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+/* REGISTRO 5 */
+_click(_textbox("txtCodigo"));
+_setValue(_textbox("txtCodigo"), "5");
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto del Evento 5");
+_click(_label("Pérdida Potencial"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

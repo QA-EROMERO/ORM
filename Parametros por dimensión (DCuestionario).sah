@@ -1,0 +1,289 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Parametros por dimensión"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+/* TAB DATOS GENERALES */
+_click(_textbox("UUID_DIMENSIONtxt"));
+_click(_imageSubmitButton("UUID_DIMENSIONbtn"));
+_wait(3000);
+_setValue(_textbox("A-DESCRIPCION"), "ER_Dimensión 2 (Cuestionario)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setSelected(_select("ESCALA_MAXcbo"), "5");
+_setSelected(_select("ESCALAMAXYcbo"), "5");
+_setValue(_textbox("DESCRIPCION_RIESGOtxt"), "ER_Riesgos");
+_setValue(_textbox("DESCRIPCION_CONTROLtxt"), "ER_Controles");
+_setValue(_textbox("DESCRIPCION_FALLAtxt"), "ER_Fallas");
+_setSelected(_select("cmbTipoCalculoVincula"), "Por promedio-simple");
+/* CHECKBOX */
+_click(_checkbox("CLASIFICADOR_EVENTOchk")); //Utilizar selección de clasificadores en Eventos/Pérdidas
+_click(_checkbox("CUESTIONARIOchk"));        //Utilizar cuestionario para cálculo de riesgo   
+_click(_checkbox("RIESGOS_ASOCIADOSchk"));   //Utilizar riesgos asociados
+_click(_checkbox("PLAN_AUDITORIAchk"));      //Utilizar evaluación de efectividad de controles
+_click(_checkbox("CLASIFICADOR_FALLAchk"));  //Utilizar clasificadores de riesgos en fallas
+_click(_checkbox("FACTORESchk"));            //Utilizar factores
+_click(_checkbox("EQUIVALENCIA_ACRMchk"));   //Equivalencia con acrm (Comparativo ACRM)
+_setValue(_textbox("FACTOR1txt"), "ER_Clientes");
+_setValue(_textbox("FACTOR2txt"), "ER_Productos");
+_setValue(_textbox("FACTOR3txt"), "ER_Canales");
+_setValue(_textbox("FACTOR4txt"), "ER_Jurisdicciones");
+/* TAB PARÁMETROS GENERALES*/
+_click(_span("Parametros generales[1]"));
+_click(_imageSubmitButton("UUID_CALCULO_INHERENTEbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cálculo Probabilidad Inherente (Concatenado)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("UUID_CUESTIONARIO_PROBbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cuestionario 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("UUID_SEVERIDAD_PROBbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("UUID_SEVERIDAD_IMPACTObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("UUID_CALCULO_RESIDUALbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cálculo Probabilidad Residual (Multiplicado)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("UUID_CALCULO_SOLIDEZIbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cálculo de diseño de control (Impacto)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("UUID_CALCULO_SOLIDEZFbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cálculo de diseño de control (Probabilidad)");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("UUID_CALCULO_SOLIDEZbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cálculo de solidez individual del control");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setSelected(_select("cmbDocAdjunto"), "Si");
+_click(_imageSubmitButton("UUID_CALCULO_EFECTIVIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cálculo efectividad del control");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("UUID_SEVERIDAD_EFECTIVIDADbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Escala 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("UUID_CUESTIONARIO_PRUEBAbtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cuestionario 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB CÓDIGO INTERNO */
+_click(_span("Código interno"));
+_setValue(_textbox("RIESGOtxt"), "RI");
+_setValue(_textbox("FALLAtxt"), "FA");
+_setValue(_textbox("CONTROLtxt"), "CT");
+_setValue(_textbox("PLANEStxt"), "PL");
+_setValue(_textbox("INDICADORtxt"), "IN");
+_setValue(_textbox("EVENTOtxt"), "EP");
+_setValue(_textbox("PRUEBAtxt"), "PR");
+_click(_imageSubmitButton("PREFIJOADDbtn"));
+_wait(3000);
+/* TAB SOLIDEZ DE CONTROLES */
+_click(_span("Solidez de controles"));
+_click(_radio("optCalculo2"));
+_click(_radio("SOLIDEZ_CONJUNTO2opt"));
+/* CARACTERÍSTICA 1 */
+_setValue(_textbox("CARACTERISTICA1txt"), "ER_Característica 1");
+_click(_submit("..."));
+_click(_radio("optTipo1"));
+_click(_imageSubmitButton("btnCuestionarioI"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cuestionario 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnCuestionarioF"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cuestionario 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("FACTORItxt"), "1");
+_setValue(_textbox("FACTORFtxt"), "1");
+_click(_span("close[4]"));
+/* CARACTERÍSTICA 2 */
+_setValue(_textbox("CARACTERISTICA2txt"), "ER_Característica 2");
+_click(_submit("...[1]"));
+_click(_radio("optTipo1"));
+_click(_imageSubmitButton("btnCuestionarioI"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cuestionario 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnCuestionarioF"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION"), "ER_Cuestionario 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("FACTORItxt"), "1");
+_setValue(_textbox("FACTORFtxt"), "1");
+_click(_span("close[4]"));
+/* CARACTERÍSTICA 3 */
+_setValue(_textbox("CARACTERISTICA3txt"), "ER_Característica 3");
+_click(_submit("...[2]"));
+_click(_radio("optTipo2"));
+_setValue(_textbox("DESCRIPCIONCtxt"), "ER_Valor 1");
+_setValue(_textbox("VALORCtxt"), "1");
+_setValue(_textbox("PORCENTAJECtxt"), "1");
+_setValue(_textbox("PORCENTAJEFtxt"), "1");
+_click(_imageSubmitButton("CARACTERISTICAAdd"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCIONCtxt"), "ER_Valor 2");
+_setValue(_textbox("VALORCtxt"), "1");
+_setValue(_textbox("PORCENTAJECtxt"), "1");
+_setValue(_textbox("PORCENTAJEFtxt"), "1");
+_click(_imageSubmitButton("CARACTERISTICAAdd"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCIONCtxt"), "ER_Valor 3");
+_setValue(_textbox("VALORCtxt"), "1");
+_setValue(_textbox("PORCENTAJECtxt"), "1");
+_setValue(_textbox("PORCENTAJEFtxt"), "1");
+_click(_imageSubmitButton("CARACTERISTICAAdd"));
+_wait(3000);
+_click(_span("close[4]"));
+/* TAB MAPA DE CALOR */
+_click(_span("Diseño de mapa de calor"));
+/* CUADRANTES HORIZONTALES (PROBABILIDAD) */
+_click(_button("Cuadrante-0-1"));
+_setValue(_textbox("ESCALAPROBABILIDADtxt"), "0.1");
+_setValue(_textbox("ESCALAPROBABILIDAD1txt"), "1");
+_setValue(_textbox("txtEtiqueta"), "1");
+_click(_button("Cuadrante-0-2"));
+_setValue(_textbox("ESCALAPROBABILIDADtxt"), "1.1");
+_setValue(_textbox("ESCALAPROBABILIDAD1txt"), "2");
+_setValue(_textbox("txtEtiqueta"), "2");
+_click(_button("Cuadrante-0-3"));
+_setValue(_textbox("ESCALAPROBABILIDADtxt"), "2.1");
+_setValue(_textbox("ESCALAPROBABILIDAD1txt"), "3");
+_setValue(_textbox("txtEtiqueta"), "3");
+_click(_button("Cuadrante-0-4"));
+_setValue(_textbox("ESCALAPROBABILIDADtxt"), "3.1");
+_setValue(_textbox("ESCALAPROBABILIDAD1txt"), "4");
+_setValue(_textbox("txtEtiqueta"), "4");
+_click(_button("Cuadrante-0-5"));
+_setValue(_textbox("ESCALAPROBABILIDADtxt"), "4.1");
+_setValue(_textbox("ESCALAPROBABILIDAD1txt"), "5");
+_setValue(_textbox("txtEtiqueta"), "5");
+/* CUADRANTES VERTICALES (IMPACTO) */
+_click(_button("Cuadrante-1-0"));
+_setValue(_textbox("ESCALAIMPACTOtxt"), "0.1");
+_setValue(_textbox("ESCALAIMPACTO1txt"), "1");
+_setValue(_textbox("txtEtiqueta"), "1");
+_click(_button("Cuadrante-2-0"));
+_setValue(_textbox("ESCALAIMPACTOtxt"), "1.1");
+_setValue(_textbox("ESCALAIMPACTO1txt"), "2");
+_setValue(_textbox("txtEtiqueta"), "2");
+_click(_button("Cuadrante-3-0"));
+_setValue(_textbox("ESCALAIMPACTOtxt"), "2.1");
+_setValue(_textbox("ESCALAIMPACTO1txt"), "3");
+_setValue(_textbox("txtEtiqueta"), "3");
+_click(_button("Cuadrante-4-0"));
+_setValue(_textbox("ESCALAIMPACTOtxt"), "3.1");
+_setValue(_textbox("ESCALAIMPACTO1txt"), "4");
+_setValue(_textbox("txtEtiqueta"), "4");
+_click(_button("Cuadrante-5-0"));
+_setValue(_textbox("ESCALAIMPACTOtxt"), "4.1");
+_setValue(_textbox("ESCALAIMPACTO1txt"), "5");
+_setValue(_textbox("txtEtiqueta"), "5");
+/* DESCRIPCIÓN DE TODOS LOS CUADRANTES */
+_click(_button("*"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P1-I1");
+_click(_button("*[1]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P1-I2");
+_click(_button("*[2]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P1-I3");
+_click(_button("*[3]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P1-I4");
+_click(_button("*[4]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P1-I5");
+_click(_button("*[5]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P2-I1");
+_click(_button("*[6]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P2-I2");
+_click(_button("*[7]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P2-I3");
+_click(_button("*[8]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P2-I4");
+_click(_button("*[9]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P2-I5");
+_click(_button("*[10]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P3-I1");
+_click(_button("*[11]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P3-I2");
+_click(_button("*[12]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P3-I3");
+_click(_button("*[13]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P3-I4");
+_click(_button("*[14]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P3-I5");
+_click(_button("*[15]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P4-I1");
+_click(_button("*[16]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P4-I2");
+_click(_button("*[17]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P4-I3");
+_click(_button("*[18]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P4-I4");
+_click(_button("*[19]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P4-I5");
+_click(_button("*[20]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P5-I1");
+_click(_button("*[21]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P5-I2");
+_click(_button("*[22]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P5-I3");
+_click(_button("*[23]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P5-I4");
+_click(_button("*[24]"));
+_setValue(_textbox("DESCRIPCIONMAPAtxt"), "P5-I5");
+//_click(_submit("Aceptar"));
+//_click(_span("close[3]"));

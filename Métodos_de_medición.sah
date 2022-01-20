@@ -1,0 +1,301 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_IMPACTO_ECONOMICO = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Métodos de medición"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Método de Medición 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+/* REGISTRO 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Método de Medición 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+/* REGISTRO 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Método de Medición 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+/* REGISTRO 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Método de Medición 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+/* REGISTRO 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Método de Medición 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 1 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Método de Medición 1");
+_click(_list("container"));
+_click(_div("ER_Método de Medición 1"));
+_click($AGREGAR_IMPACTO_ECONOMICO);
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 1");
+_setValue(_textbox("txtPuntos"), "1");
+_setValue(_textbox("txtLimInf"), "00.01");
+_setValue(_textbox("txtLimSup"), "1.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 2");
+_setValue(_textbox("txtPuntos"), "2");
+_setValue(_textbox("txtLimInf"), "1.1");
+_setValue(_textbox("txtLimSup"), "2.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 3");
+_setValue(_textbox("txtPuntos"), "3");
+_setValue(_textbox("txtLimInf"), "2.1");
+_setValue(_textbox("txtLimSup"), "3.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 4 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 4");
+_setValue(_textbox("txtPuntos"), "4");
+_setValue(_textbox("txtLimInf"), "3.1");
+_setValue(_textbox("txtLimSup"), "4.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 5 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 5");
+_setValue(_textbox("txtPuntos"), "5");
+_setValue(_textbox("txtLimInf"), "4.1");
+_setValue(_textbox("txtLimSup"), "5.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 2 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Método de Medición 2");
+_click(_list("container"));
+_click(_div("ER_Método de Medición 2"));
+_click($AGREGAR_IMPACTO_ECONOMICO);
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 1");
+_setValue(_textbox("txtPuntos"), "1");
+_setValue(_textbox("txtLimInf"), "00.01");
+_setValue(_textbox("txtLimSup"), "1.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 2");
+_setValue(_textbox("txtPuntos"), "2");
+_setValue(_textbox("txtLimInf"), "1.1");
+_setValue(_textbox("txtLimSup"), "2.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 3");
+_setValue(_textbox("txtPuntos"), "3");
+_setValue(_textbox("txtLimInf"), "2.1");
+_setValue(_textbox("txtLimSup"), "3.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 4 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 4");
+_setValue(_textbox("txtPuntos"), "4");
+_setValue(_textbox("txtLimInf"), "3.1");
+_setValue(_textbox("txtLimSup"), "4.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 5 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 5");
+_setValue(_textbox("txtPuntos"), "5");
+_setValue(_textbox("txtLimInf"), "4.1");
+_setValue(_textbox("txtLimSup"), "5.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 3 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Método de Medición 3");
+_click(_list("container"));
+_click(_div("ER_Método de Medición 3"));
+_click($AGREGAR_IMPACTO_ECONOMICO);
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 1");
+_setValue(_textbox("txtPuntos"), "1");
+_setValue(_textbox("txtLimInf"), "00.01");
+_setValue(_textbox("txtLimSup"), "1.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 2");
+_setValue(_textbox("txtPuntos"), "2");
+_setValue(_textbox("txtLimInf"), "1.1");
+_setValue(_textbox("txtLimSup"), "2.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 3");
+_setValue(_textbox("txtPuntos"), "3");
+_setValue(_textbox("txtLimInf"), "2.1");
+_setValue(_textbox("txtLimSup"), "3.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 4 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 4");
+_setValue(_textbox("txtPuntos"), "4");
+_setValue(_textbox("txtLimInf"), "3.1");
+_setValue(_textbox("txtLimSup"), "4.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 5 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 5");
+_setValue(_textbox("txtPuntos"), "5");
+_setValue(_textbox("txtLimInf"), "4.1");
+_setValue(_textbox("txtLimSup"), "5.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 4 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Método de Medición 4");
+_click(_list("container"));
+_click(_div("ER_Método de Medición 4"));
+_click($AGREGAR_IMPACTO_ECONOMICO);
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 1");
+_setValue(_textbox("txtPuntos"), "1");
+_setValue(_textbox("txtLimInf"), "00.01");
+_setValue(_textbox("txtLimSup"), "1.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 2");
+_setValue(_textbox("txtPuntos"), "2");
+_setValue(_textbox("txtLimInf"), "1.1");
+_setValue(_textbox("txtLimSup"), "2.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 3");
+_setValue(_textbox("txtPuntos"), "3");
+_setValue(_textbox("txtLimInf"), "2.1");
+_setValue(_textbox("txtLimSup"), "3.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 4 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 4");
+_setValue(_textbox("txtPuntos"), "4");
+_setValue(_textbox("txtLimInf"), "3.1");
+_setValue(_textbox("txtLimSup"), "4.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 5 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 5");
+_setValue(_textbox("txtPuntos"), "5");
+_setValue(_textbox("txtLimInf"), "4.1");
+_setValue(_textbox("txtLimSup"), "5.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*=================== VALORES DEL REGISTRO 5 ======================*/
+/* VALOR 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Método de Medición 5");
+_click(_list("container"));
+_click(_div("ER_Método de Medición 5"));
+_click($AGREGAR_IMPACTO_ECONOMICO);
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 1");
+_setValue(_textbox("txtPuntos"), "1");
+_setValue(_textbox("txtLimInf"), "00.01");
+_setValue(_textbox("txtLimSup"), "1.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 2 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 2");
+_setValue(_textbox("txtPuntos"), "2");
+_setValue(_textbox("txtLimInf"), "1.1");
+_setValue(_textbox("txtLimSup"), "2.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 3 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 3");
+_setValue(_textbox("txtPuntos"), "3");
+_setValue(_textbox("txtLimInf"), "2.1");
+_setValue(_textbox("txtLimSup"), "3.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 4 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 4");
+_setValue(_textbox("txtPuntos"), "4");
+_setValue(_textbox("txtLimInf"), "3.1");
+_setValue(_textbox("txtLimSup"), "4.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* VALOR 5 */
+_click(_textbox("txtDescripcion"));
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Impacto Económico 5");
+_setValue(_textbox("txtPuntos"), "5");
+_setValue(_textbox("txtLimInf"), "4.1");
+_setValue(_textbox("txtLimSup"), "5.00");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

@@ -1,0 +1,1060 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_ROL = _span("Agregar[1]");
+$AGREGAR_UNIDADES_DE_NEGOCIO = _span("Agregar[2]");
+$AGREGAR_FALLAS_SUGERIDAS = _span("Agregar[3]");
+$AGREGAR_CONSECUENCIA_SUGERIDA = _span("Agregar[4]");
+$AGREGAR_CONTROLES_SUGERIDOS = _span("Agregar[5]");
+
+_wait(5000);
+_click(_listItem("ER_Riesgos genéricos"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* ER_RIESGO GENÉRICO 1 */
+/* TAB DE DETALLE */
+_click(_span("Detalle"));
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("RIESGO"), "RI");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Riesgo Genérico 1");
+_setValue(_textbox("CODIGO_EQUIVALENTEtxt"), "RI0001");
+_click(_textbox("UUID_TIPO_RIESGOtxt"));
+_click(_imageSubmitButton("UUID_TIPO_RIESGObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de ER_Riesgo 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCION_DETALLADAtxt"), "Descripción detallada del ER_Riesgo Genérico 1");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Riesgo Genérico 1");
+/* TAB DE CLASIFICADORES */
+_click(_span("Clasificadores"));
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+/* TAB DOCUMENTOS DE REFERENCIA */
+_click(_span("Documentos de referencia"));
+_click(_textbox("DOCUMENTOtxt"));
+_click(_imageSubmitButton("DOCUMENTObtn"));
+_wait(3000);
+_setValue(_textbox("A-DESCRIPCION"), "ER_Documento de referencia 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+
+/* ER_RIESGO GENÉRICO 2 */
+/* TAB DE DETALLE */
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_span("Detalle"));
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("RIESGO"), "RI");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Riesgo Genérico 2");
+_setValue(_textbox("CODIGO_EQUIVALENTEtxt"), "RI0002");
+_click(_textbox("UUID_TIPO_RIESGOtxt"));
+_click(_imageSubmitButton("UUID_TIPO_RIESGObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de ER_Riesgo 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCION_DETALLADAtxt"), "Descripción detallada del ER_Riesgo Genérico 2");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Riesgo Genérico 2");
+/* TAB DE CLASIFICADORES */
+_click(_span("Clasificadores"));
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+/* TAB DOCUMENTOS DE REFERENCIA */
+_click(_span("Documentos de referencia"));
+_click(_textbox("DOCUMENTOtxt"));
+_click(_imageSubmitButton("DOCUMENTObtn"));
+_wait(3000);
+_setValue(_textbox("A-DESCRIPCION"), "ER_Documento de referencia 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_RIESGO GENÉRICO 3 */
+/* TAB DE DETALLE */
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_span("Detalle"));
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("RIESGO"), "RI");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Riesgo Genérico 3");
+_setValue(_textbox("CODIGO_EQUIVALENTEtxt"), "RI0003");
+_click(_textbox("UUID_TIPO_RIESGOtxt"));
+_click(_imageSubmitButton("UUID_TIPO_RIESGObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de ER_Riesgo 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCION_DETALLADAtxt"), "Descripción detallada del ER_Riesgo Genérico 3");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Riesgo Genérico 3");
+/* TAB DE CLASIFICADORES */
+_click(_span("Clasificadores"));
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+/* TAB DOCUMENTOS DE REFERENCIA */
+_click(_span("Documentos de referencia"));
+_click(_textbox("DOCUMENTOtxt"));
+_click(_imageSubmitButton("DOCUMENTObtn"));
+_wait(3000);
+_setValue(_textbox("A-DESCRIPCION"), "ER_Documento de referencia 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_RIESGO GENÉRICO 4 */
+/* TAB DE DETALLE */
+_click(_span("Detalle"));
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("RIESGO"), "RI");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Riesgo Genérico 4");
+_setValue(_textbox("CODIGO_EQUIVALENTEtxt"), "RI0004");
+_click(_textbox("UUID_TIPO_RIESGOtxt"));
+_click(_imageSubmitButton("UUID_TIPO_RIESGObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de ER_Riesgo 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCION_DETALLADAtxt"), "Descripción detallada del ER_Riesgo Genérico 4");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Riesgo Genérico 4");
+/* TAB DE CLASIFICADORES */
+_click(_span("Clasificadores"));
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+/* TAB DOCUMENTOS DE REFERENCIA */
+_click(_span("Documentos de referencia"));
+_click(_textbox("DOCUMENTOtxt"));
+_click(_imageSubmitButton("DOCUMENTObtn"));
+_wait(3000);
+_setValue(_textbox("A-DESCRIPCION"), "ER_Documento de referencia 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* ER_RIESGO GENÉRICO 5 */
+/* TAB DE DETALLE */
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_span("Detalle"));
+_click(_textbox("RELACIONtxt"));
+_click(_imageSubmitButton("RELACIONbtn"));
+_wait(3000);
+_setValue(_textbox("RIESGO"), "RI");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Riesgo Genérico 5");
+_setValue(_textbox("CODIGO_EQUIVALENTEtxt"), "RI0005");
+_click(_textbox("UUID_TIPO_RIESGOtxt"));
+_click(_imageSubmitButton("UUID_TIPO_RIESGObtn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de ER_Riesgo 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("DESCRIPCION_DETALLADAtxt"), "Descripción detallada del ER_Riesgo Genérico 5");
+_setValue(_textarea("COMENTARIOtxt"), "Comentario del ER_Riesgo Genérico 5");
+/* TAB DE CLASIFICADORES */
+_click(_span("Clasificadores"));
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+_click(_textbox("txtDESC_CLASIFICACION"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtDESC_CLASIFICADOR"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_wait(3000);
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("btnADD"))
+/* TAB DOCUMENTOS DE REFERENCIA */
+_click(_span("Documentos de referencia"));
+_click(_textbox("DOCUMENTOtxt"));
+_click(_imageSubmitButton("DOCUMENTObtn"));
+_wait(3000);
+_setValue(_textbox("A-DESCRIPCION"), "ER_Documento de referencia 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("AGREGARbtn"));
+_wait(3000);
+_click(_span("Detalle"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+_click(_span("ui-icon ui-icon-close")); //Cierre del mantenimiento
+_wait(3000);
+_click(_listItem("ER_Riesgos genéricos"));
+_wait(5000);
+
+
+/*=====================================================================*/
+// ASOCIANDO ROLES, UNIDADES DE NEGOCIO, NIDADES DE NEGOCIO, 
+// FALLAS SUGERIDAS, CONSECUENCIA SUGERIDA, CONTROLES SUGERIDOS
+/*=====================================================================*/
+/* ROLES */
+/* ER_RIESGO GENÉRICO 1 */
+_wait(5000);
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 1");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 1"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");  
+//_setValue(_textbox("NOMBRE[1]"), "Detalle del rol ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 2 */
+_wait(5000);
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 2");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 2"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");  // ESTA ES LA LÌNEA DE CÓDIGO CORRECTA
+//_setValue(_textbox("NOMBRE[1]"), "Detalle del rol ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 3 */
+_wait(5000);
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 3");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 3"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");  // ESTA ES LA LÌNEA DE CÓDIGO CORRECTA
+//_setValue(_textbox("NOMBRE[1]"), "Detalle del rol ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 4 */
+_wait(5000);
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 4");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 4"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");  // ESTA ES LA LÌNEA DE CÓDIGO CORRECTA
+//_setValue(_textbox("NOMBRE[1]"), "Detalle del rol ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 5 */
+_wait(5000);
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 5");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 5"));
+_click($AGREGAR_ROL);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("NOMBRE[1]"), "ER_Administrador");  // ESTA ES LA LÌNEA DE CÓDIGO CORRECTA
+//_setValue(_textbox("NOMBRE[1]"), "Detalle del rol ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* UNIDADES DE NEGOCIO */
+/* ER_RIESGO GENÉRICO 1 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 1");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 1"));
+_click(_link("Unidades de negocio sugeridas"));
+_click($AGREGAR_UNIDADES_DE_NEGOCIO);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Unidad de negocio 1.1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 2 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 2");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 2"));
+_click(_link("Unidades de negocio sugeridas"));
+_click($AGREGAR_UNIDADES_DE_NEGOCIO);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Unidad de negocio 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 3 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 3");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 3"));
+_click(_link("Unidades de negocio sugeridas"));
+_click($AGREGAR_UNIDADES_DE_NEGOCIO);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Unidad de negocio 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 4 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 4");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 4"));
+_click(_link("Unidades de negocio sugeridas"));
+_click($AGREGAR_UNIDADES_DE_NEGOCIO);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Unidad de negocio 2.1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 5 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 5");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 5"));
+_click(_link("Unidades de negocio sugeridas"));
+_click($AGREGAR_UNIDADES_DE_NEGOCIO);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Unidad de negocio 2.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* FALLAS SUGERIDAS */
+/* ER_RIESGO GENÉRICO 1 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 1");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 1"));
+_click(_link("ER_Fallas sugerida"));
+_click($AGREGAR_FALLAS_SUGERIDAS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Falla Genérica 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 2 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 2");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 2"));
+_click(_link("ER_Fallas sugerida"));
+_click($AGREGAR_FALLAS_SUGERIDAS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Falla Genérica 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 3 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 3");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 3"));
+_click(_link("ER_Fallas sugerida"));
+_click($AGREGAR_FALLAS_SUGERIDAS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Falla Genérica 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 4 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 4");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 4"));
+_click(_link("ER_Fallas sugerida"));
+_click($AGREGAR_FALLAS_SUGERIDAS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Falla Genérica 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 5 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 5");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 5"));
+_click(_link("ER_Fallas sugerida"));
+_click($AGREGAR_FALLAS_SUGERIDAS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Falla Genérica 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* CONSECUENCIA SUGERIDA */
+/* ER_RIESGO GENÉRICO 1 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 1");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 1"));
+_click(_link("Consecuencia sugerida"));
+_click($AGREGAR_CONSECUENCIA_SUGERIDA);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+//_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de consecuencia 1"); //ESTA ES LA LÍNEA DE CÓDIGO CORRECTA
+_setValue(_textbox("DESCRIPCION[5]"), "Descripción del ER_Tipo de consecuencia 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 2 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 2");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 2"));
+_click(_link("Consecuencia sugerida"));
+_click($AGREGAR_CONSECUENCIA_SUGERIDA);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+//_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de consecuencia 2"); //ESTA ES LA LÍNEA DE CÓDIGO CORRECTA
+_setValue(_textbox("DESCRIPCION[5]"), "Descripción del ER_Tipo de consecuencia 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 3 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 3");
+_wait(3000);
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_div("Descripción detallada del ER_Riesgo Genérico 3"));
+_click(_link("Consecuencia sugerida"));
+_click($AGREGAR_CONSECUENCIA_SUGERIDA);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+//_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de consecuencia 3"); //ESTA ES LA LÍNEA DE CÓDIGO CORRECTA
+_setValue(_textbox("DESCRIPCION[5]"), "Descripción del ER_Tipo de consecuencia 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 4 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 4");
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_wait(3000);
+_click(_div("Descripción detallada del ER_Riesgo Genérico 4"));
+_click(_link("Consecuencia sugerida"));
+_click($AGREGAR_CONSECUENCIA_SUGERIDA);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+//_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de consecuencia 4"); //ESTA ES LA LÍNEA DE CÓDIGO CORRECTA
+_setValue(_textbox("DESCRIPCION[5]"), "Descripción del ER_Tipo de consecuencia 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 5 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 5");
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_wait(3000);
+_click(_div("Descripción detallada del ER_Riesgo Genérico 5"));
+_click(_link("Consecuencia sugerida"));
+_click($AGREGAR_CONSECUENCIA_SUGERIDA);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+//_setValue(_textbox("DESCRIPCION[5]"), "ER_Tipo de consecuencia 5"); //ESTA ES LA LÍNEA DE CÓDIGO CORRECTA
+_setValue(_textbox("DESCRIPCION[5]"), "Descripción del ER_Tipo de consecuencia 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_CONTROLES SUGERIDOS */
+/* ER_RIESGO GENÉRICO 1 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 1");
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_wait(3000);
+_click(_div("Descripción detallada del ER_Riesgo Genérico 1"));
+_click(_link("ER_Controles sugerido"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Control Genérico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 2 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 2");
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_wait(3000);
+_click(_div("Descripción detallada del ER_Riesgo Genérico 2"));
+_click(_link("ER_Controles sugerido"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Control Genérico 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 3 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 3");
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_wait(3000);
+_click(_div("Descripción detallada del ER_Riesgo Genérico 3"));
+_click(_link("ER_Controles sugerido"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Control Genérico 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 4 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 4");
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_wait(3000);
+_click(_div("Descripción detallada del ER_Riesgo Genérico 4"));
+_click(_link("ER_Controles sugerido"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Control Genérico 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/* ER_RIESGO GENÉRICO 5 */
+_setValue(_textbox("DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 5");
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_click(_list("container"));
+_wait(3000);
+_click(_div("Descripción detallada del ER_Riesgo Genérico 5"));
+_click(_link("ER_Controles sugerido"));
+_click($AGREGAR_CONTROLES_SUGERIDOS);
+_click(_textbox("HIJOtxt"));
+_click(_imageSubmitButton("BUSQUEDA2btn"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[5]"), "ER_Control Genérico 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

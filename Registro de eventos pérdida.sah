@@ -1,0 +1,186 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Registro de eventos/pérdidas"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* EVENTO DE PÉRDIDA 1 */
+/*===============================*/
+/* SELECCIÓN DEL CÓDIGO */
+/*===============================*/
+_click(_imageSubmitButton("btnSrcRelacion"));
+_setValue(_textbox("EVENTO"), "EP");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+
+/*===============================*/
+/* DESCRIPCIÓN DEL EVENTO */
+/*===============================*/
+_setValue(_textbox("txtDescripcion"), "ER_Evento de Pérdida 1");
+_click(_span("Datos generales[1]"));
+
+/*===============================*/
+/* ENTIDAD */
+/*===============================*/
+_click(_imageSubmitButton("btnSrcEntidad"));
+_click(_textbox("A-DESCRIPCION"));
+_setValue(_textbox("A-DESCRIPCION"), "ER_Entidad 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+
+/*===============================*/
+/* ENTIDAD A SUBPROCESO */
+/*===============================*/
+_click(_textbox("txtProceso"));
+_click(_imageSubmitButton("btnSrcProceso"));
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Actividad 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+
+/*===============================*/
+/* RIESGO */
+/*===============================*/
+_click(_textbox("txtRiesgo"));
+_click(_imageSubmitButton("btnSrcRiesgo"));
+_click(_textbox("B-DESCRIPCION_DETALLADA"));
+_setValue(_textbox("B-DESCRIPCION_DETALLADA"), "Descripción detallada del ER_Riesgo Genérico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+
+/*===============================*/
+/* TIPOS DE CLASIFICACIÓN */
+/*===============================*/
+/* REGISTRO 1 */
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Tipo de clasificación 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_click(_textbox("a-Descripcion"));
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddClasificador"));
+/* REGISTRO 2 */
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Tipo de clasificación 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_click(_textbox("a-Descripcion"));
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddClasificador"));
+/* REGISTRO 3 */
+_click(_textbox("txtClasificacion"));
+_click(_imageSubmitButton("btnSrcClasificacion"));
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Tipo de clasificación 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtClasificador"));
+_click(_imageSubmitButton("btnSrcClasificador"));
+_click(_textbox("a-Descripcion"));
+_setValue(_textbox("a-Descripcion"), "ER_Clasificador 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddClasificador"));
+
+/*===============================*/
+/* RECURSO TECNOLÓGICO */
+/*===============================*/
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_click(_textbox("A-DESCRIPCION"));
+_setValue(_textbox("A-DESCRIPCION"), "ER_Recurso Tecnológico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+
+/*===============================*/
+/* UNIDADES DE NEGOCIO */
+/*===============================*/
+/* REGISTRO 1 */
+_click(_textbox("txtUnidadNegocio"));
+_click(_imageSubmitButton("btnSrcUnidadNegocio"));
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Unidad de negocio 1.1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddUnidadNegocio"));
+/* REGISTRO 2 */
+_click(_textbox("txtUnidadNegocio"));
+_click(_imageSubmitButton("btnSrcUnidadNegocio"));
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Unidad de negocio 1.1.2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddUnidadNegocio"));
+/* REGISTRO 3 */
+_click(_textbox("txtUnidadNegocio"));
+_click(_imageSubmitButton("btnSrcUnidadNegocio"));
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Unidad de negocio 1.1.3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddUnidadNegocio"));
+
+/*===============================*/
+/* CÓDIGO DE SUCURSAL */
+/*===============================*/
+_click(_textbox("txtSucursal"));
+_click(_imageSubmitButton("btnSrcSucursal"));
+_click(_textbox("DESCRIPCION[1]"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Código de sucrusal 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+
+/*===============================*/
+/* LÍNEAS DE NEGOCIO */
+/*===============================*/
+_click(_textbox("txtLineaNegocio"));
+_click(_imageSubmitButton("btnSrcLineaNegocio"));
+_click(_textbox("A-Descripcion"));
+_setValue(_textbox("A-Descripcion"), "ER_Linea de negocio 1.1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtPorcParticipacion"));
+_setValue(_textbox("txtPorcParticipacion"), "100");
+_click(_imageSubmitButton("btnAddLineaNegocio"));

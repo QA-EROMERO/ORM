@@ -1,0 +1,70 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Región"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*===================================================================*/
+/*==================== AGREGANDO REGISTROS ==========================*/
+/*===================================================================*/
+_setValue(_textbox("txtCodigo"), "01");
+_setValue(_textbox("txtDescripcion"), "ER_Región 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0101");
+_setValue(_textbox("txtDescripcion"), "ER_Región 1.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0102");
+_setValue(_textbox("txtDescripcion"), "ER_Región 1.2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0103");
+_setValue(_textbox("txtDescripcion"), "ER_Región 1.3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0104");
+_setValue(_textbox("txtDescripcion"), "ER_Región 1.4");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0105");
+_setValue(_textbox("txtDescripcion"), "ER_Región 1.5");
+_click(_submit("Aceptar"));
+_wait(5000);
+/*===================================================================*/
+_setValue(_textbox("txtCodigo"), "02");
+_setValue(_textbox("txtDescripcion"), "ER_Región 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0201");
+_setValue(_textbox("txtDescripcion"), "ER_Región 2.1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0202");
+_setValue(_textbox("txtDescripcion"), "ER_Región 2.2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0203");
+_setValue(_textbox("txtDescripcion"), "ER_Región 2.3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0204");
+_setValue(_textbox("txtDescripcion"), "ER_Región 2.4");
+_click(_submit("Aceptar"));
+_wait(5000);
+_setValue(_textbox("txtCodigo"), "0205");
+_setValue(_textbox("txtDescripcion"), "ER_Región 2.5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

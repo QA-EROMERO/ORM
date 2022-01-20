@@ -1,0 +1,354 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_CONTROLES = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+
+_click(_listItem("ER_Riesgos"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+/* SELECCIONANDO RIESGO GENÉRICO */
+_setValue(_textbox("Descripción detallada"), "Descripción detallada del ER_Riesgo Genérico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB DATOS GENERALES */
+_click(_textbox("txtProceso"));
+_click(_imageSubmitButton("btnProceso"));
+_setValue(_textbox("DESCRIPCION"), "ER_Entidad 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_click(_textbox("txtUnidad"));
+_click(_imageSubmitButton("btnUnidad"));
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtConsecuencia"));
+_click(_imageSubmitButton("btnConsecuencia"));
+_setValue(_textbox("DESCRIPCION"), "Descripción del ER_Tipo de consecuencia 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+
+
+/* TAB FALLAS */
+_click(_span("ER_Fallas"));
+_click(_textbox("ROFALCODtxt"));
+_click(_imageSubmitButton("btnFalla"));
+_setValue(_textbox("A-DESCRIPCION"), "ER_Falla Genérica 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("ROPARTICIPACIONtxt"), "100");
+_click(_imageSubmitButton("Add2"));
+
+/* CONTROL A FALLA 1 */
+/* TAB DATOS DEL ER_CONTROLES */
+_click(_imageSubmitButton("EVALbtn1"));
+_click($AGREGAR_CONTROLES);
+_click(_textarea("txtControl"));
+_click(_imageSubmitButton("btnSrcControl"));
+_setValue(_textbox("DETALLE"), "Detalle del ER_Control Genérico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtRolResponsable"));
+_click(_imageSubmitButton("btnSrcRolResponsable"));
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSolidezIndividual"));
+_setValue(_textarea("txtObservacionDiseño"), "Observaciones frente al diseño del ER_Controles");
+
+/* TAB CARACTERÍSTICAS */
+/* TAB PRUEBAS */
+_click(_span("Pruebas"));
+_click(_textbox("txtPrueba"));
+_click(_imageSubmitButton("btnSrcPrueba"));
+_setValue(_textbox("DETALLE"), "Detalle de la ER_Prueba Genérica 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddPrueba"));
+_click(_label("Rol[1]"));
+_click(_textbox("txtRolPrueba"));
+_click(_imageSubmitButton("btnSrcRolPrueba"));
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRolPrueba"));
+_setValue(_textarea("txtDescripcionPrueba"), "Descripción de la ER_Prueba Genérica 1");
+_setValue(_textarea("txtOportunidadMejora"), "Oportunidad de Mejora de la ER_Prueba Genérica 1");
+_setValue(_textarea("txtRecomendacion"), "Recomendación de la ER_Prueba Genérica 1");
+
+/* TAB DATOS ADICIONALES */
+_click(_span("Datos adicionales[1]"));
+_setValue(_textbox("TXT1"), "12345");
+_setValue(_textbox("TXT2"), "A1B2C");
+_setValue(_textarea("TXT3"), "Comentario del ER_CAMPO ADICIONAL 3");
+_click(_textbox("TXF1"));
+_click(_link("14[2]"));
+_setSelected(_select("CMB1"), "No");
+_click(_submit("Aceptar[1]"));
+
+/* CONTROL A FALLA 2 */
+/* TAB DATOS DEL ER_CONTROLES */
+_click(_span("Datos del ER_Controles"));
+_click(_textarea("txtControl"));
+_click(_imageSubmitButton("btnSrcControl"));
+_setValue(_textbox("DETALLE"), "Detalle del ER_Control Genérico 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtRolResponsable"));
+_click(_imageSubmitButton("btnSrcRolResponsable"));
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSolidezIndividual"));
+_setValue(_textarea("txtObservacionDiseño"), "Observaciones frente al diseño del ER_Controles");
+
+/* TAB CARACTERÍSTICAS */
+/* TAB PRUEBAS */
+_click(_span("Pruebas"));
+_click(_textbox("txtPrueba"));
+_click(_imageSubmitButton("btnSrcPrueba"));
+_setValue(_textbox("DETALLE"), "Detalle de la ER_Prueba Genérica 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddPrueba"));
+_click(_label("Rol[1]"));
+_click(_textbox("txtRolPrueba"));
+_click(_imageSubmitButton("btnSrcRolPrueba"));
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRolPrueba"));
+_setValue(_textarea("txtDescripcionPrueba"), "Descripción de la ER_Prueba Genérica 2");
+_setValue(_textarea("txtOportunidadMejora"), "Oportunidad de Mejora de la ER_Prueba Genérica 2");
+_setValue(_textarea("txtRecomendacion"), "Recomendación de la ER_Prueba Genérica 2");
+
+/* TAB DATOS ADICIONALES */
+_click(_span("Datos adicionales[1]"));
+_setValue(_textbox("TXT1"), "12345");
+_setValue(_textbox("TXT2"), "A1B2C");
+_setValue(_textarea("TXT3"), "Comentario del ER_CAMPO ADICIONAL 3");
+_click(_textbox("TXF1"));
+_click(_link("14[2]"));
+_setSelected(_select("CMB1"), "No");
+_click(_submit("Aceptar[1]"));
+_click(_span("close[7]"));
+_click(_span("close[5]"));
+
+/* TRASLAPE SOLIDEZ IMPACTO */
+_click(_imageSubmitButton("TRLBtn1"));
+_wait(1000, _alert("1. Presione el botón 'Pause' del controlador de Sahi 2. Realice el Traslape 'Solidez de Impacto' 3. Cierre la ventana del Traslape"));
+_click(_imageSubmitButton("TRLFBtn1"));
+_wait(1000, _alert("1. Presione el botón 'Pause' del controlador de Sahi 2. Realice el Traslape ''Solidez de Probabilidad'' 3. Cierre la ventana del Traslape"));
+
+/* CONTROLES A RIESGOS 1 */
+_click(_textbox("txtControl"));
+_click(_imageSubmitButton("btnControl"));
+_setValue(_textbox("DETALLE"), "Detalle del ER_Control Genérico 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("addControl"));
+
+/* DATOS DEL ER_CONTROLES */
+_click(_span("Datos del ER_Controles"));
+_click(_label("Rol"));
+_click(_textbox("txtRolResponsable"));
+_click(_imageSubmitButton("btnSrcRolResponsable"));
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSolidezIndividual"));
+_setValue(_textarea("txtObservacionDiseño"), "Observación frente al diseño del ER_Control Genérico 3");
+
+/* TAB PRUEBAS */
+_click(_span("Pruebas"));
+_click(_textbox("txtPrueba"));
+_click(_imageSubmitButton("btnSrcPrueba"));
+_setValue(_textbox("DETALLE"), "Detalle de la ER_Prueba Genérica 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddPrueba"));
+_click(_label("Rol[1]"));
+_click(_textbox("txtRolPrueba"));
+_click(_imageSubmitButton("btnSrcRolPrueba"));
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRolPrueba"));
+_setValue(_textarea("txtDescripcionPrueba"), "Descripción de la ER_Prueba Genérica 3");
+_setValue(_textarea("txtOportunidadMejora"), "Oportunidad de Mejora de la ER_Prueba Genérica 3");
+_setValue(_textarea("txtRecomendacion"), "Recomendación de la ER_Prueba Genérica 3");
+
+/* TAB DATOS ADICIONALES */
+_click(_span("Datos adicionales[1]"));
+_setValue(_textbox("TXT1"), "67890");
+_setValue(_textbox("TXT2"), "F2S5EE");
+_setValue(_textarea("TXT3"), "ER_Comentario");
+/* CLICK POPUP CALENDARIO */
+//_click(_imageSubmitButton("IMGADD1"));
+//_popup("Calendario")._click(_link("25"));
+_click(_textbox("TXF1"));
+_click(_link("14[2]"));
+_setSelected(_select("CMB1"), "No");
+_click(_submit("Aceptar[1]"));
+
+/* CONTROLES A RIESGOS 2 */
+_click(_textbox("txtControl"));
+_click(_imageSubmitButton("btnControl"));
+_setValue(_textbox("DETALLE"), "Detalle del ER_Control Genérico 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("addControl"));
+
+/* DATOS DEL ER_CONTROLES */
+_click(_span("Datos del ER_Controles"));
+_click(_label("Rol"));
+_click(_textbox("txtRolResponsable"));
+_click(_imageSubmitButton("btnSrcRolResponsable"));
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnSolidezIndividual"));
+_setValue(_textarea("txtObservacionDiseño"), "Observación frente al diseño del ER_Control Genérico 4");
+
+/* TAB PRUEBAS */
+_click(_span("Pruebas"));
+_click(_textbox("txtPrueba"));
+_click(_imageSubmitButton("btnSrcPrueba"));
+_setValue(_textbox("DETALLE"), "Detalle de la ER_Prueba Genérica 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddPrueba"));
+_click(_label("Rol[1]"));
+_click(_textbox("txtRolPrueba"));
+_click(_imageSubmitButton("btnSrcRolPrueba"));
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRolPrueba"));
+_setValue(_textarea("txtDescripcionPrueba"), "Descripción de la ER_Prueba Genérica 4");
+_setValue(_textarea("txtOportunidadMejora"), "Oportunidad de Mejora de la ER_Prueba Genérica 4");
+_setValue(_textarea("txtRecomendacion"), "Recomendación de la ER_Prueba Genérica 4");
+
+/* TAB DATOS ADICIONALES */
+_click(_span("Datos adicionales[1]"));
+_setValue(_textbox("TXT1"), "67890");
+_setValue(_textbox("TXT2"), "F2S5EE");
+_setValue(_textarea("TXT3"), "ER_Comentario");
+
+/* CLICK POPUP CALENDARIO */
+//_click(_imageSubmitButton("IMGADD1"));
+//_popup("Calendario")._click(_link("25"));
+_click(_textbox("TXF1"));
+_click(_link("14[2]"));
+_setSelected(_select("CMB1"), "No");
+_click(_submit("Aceptar[1]"));
+
+/* TRASLAPE */
+_click(_imageSubmitButton("traslapeCI"));
+_wait(1000, _alert("1. Presione el botón 'Pause' del controlador de Sahi 2. Realice el Traslape 3. Cierre la ventana del Traslape"));
+_click(_imageSubmitButton("traslapeCF"));
+_wait(1000, _alert("1. Presione el botón 'Pause' del controlador de Sahi 2. Realice el Traslape 3. Cierre la ventana del Traslape"));
+
+
+
+
+/* TAB DE EVALUACIÓN CUALITATIVA */
+_click(_span("Evaluación cualitativa"));
+/* TAB PROBABILIDAD */
+_click(_link("Probabilidad[1]"));
+_click(_label("ER_Opción 3"));
+_click(_label("Sí"));
+/* TAB IMPACTO */
+_click(_link("Impacto[1]"));
+_click(_label("ER_Opción 7[1]"));
+_click(_label("No[1]"));
+
+
+
+/* TAB RESULTADO DE LA EVALUACIÓN */
+_click(_span("Resultado evaluación"));
+_setSelected(_select("cmbImpacto_Informacion"), "ER_Tipo de Impacto a la Información 1");
+_setValue(_textbox("txtCriticidad2"), "1");
+
+
+
+/* TAB COMENTARIOS */
+_click(_span("Comentarios"));
+_setValue(_textarea("ROESVCOMtxt"), "Comentarios del ER_Riesgo");
+_click(_textarea("ROPROBCODtxt"));
+_click(_imageSubmitButton("btnSoporte_ProbabilidadI"));
+_setValue(_textbox("DESCRIPCION"), "ER_Soporte de Probabilidad 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("ROESVJUSFtxt"), "Justificación de selección de criterio principal - Probabilidad");
+_click(_textarea("ROIMPCODtxt"));
+_click(_imageSubmitButton("btnSoporte_ImpactoI"));
+_setValue(_textbox("DESCRIPCION"), "ER_Soporte de Impacto 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("ROESVJUSItxt"), "Justificación de selección de criterio principal - Impacto");
+_click(_textarea("ROPROBCODRtxt"));
+_click(_imageSubmitButton("btnSoporte_ProbabilidadR"));
+_setValue(_textbox("DESCRIPCION"), "ER_Soporte de Probabilidad 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("ROESVJUSFRtxt"), "Justificación de selección de criterio principal - probabilidad");
+_click(_textarea("ROIMPCODRtxt"));
+_click(_imageSubmitButton("btnSoporte_ImpactoR"));
+_setValue(_textbox("DESCRIPCION"), "ER_Soporte de Impacto 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("ROESVJUSIRtxt"), "Justificación de selección de criterio principal - Impacto");
+
+/* TAB DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setValue(_textbox(0, _near(_span("ER_Campo adicional 1 (Numérico)"))), "12345");
+_setValue(_textbox(0, _near(_span("ER_Campo adicional 2 (Alfanumérico)"))), "A1B2C");
+_setValue(_textarea(0, _near(_span("ER_Campo adicional 3 (Comentario)"))), "ER_Campo adicional 3");
+/* CLICK POPUP CALENDARIO */
+_click(_textbox(0, _near(_span("ER_Campo adicional 4 (Fecha)"))));
+_click(_link("14"));
+_setSelected(_select(0, _near(_span("ER_Campo adicional 5 (Sí-No)"))), "Si");
+_click(_submit("Aceptar"));

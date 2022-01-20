@@ -1,0 +1,56 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+_click(_listItem("Periodos del indicador"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Periodo del Indicador 1 (Diario)");
+_setSelected(_select("cmbTipo"), "Diario");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Periodo del Indicador 2 (Semanal)");
+_setSelected(_select("cmbTipo"), "Semanal");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Periodo del Indicador 3 (Mensual)");
+_setSelected(_select("cmbTipo"), "Mensual");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Periodo del Indicador 4 (Bimestral)");
+_setSelected(_select("cmbTipo"), "Bimestral");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Periodo del Indicador 5 (Trimestral)");
+_setSelected(_select("cmbTipo"), "Trimestral");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 6 */
+_setValue(_textbox("txtDescripcion"), "ER_Periodo del Indicador 6 (Semestral)");
+_setSelected(_select("cmbTipo"), "Semestral");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 7 */
+_setValue(_textbox("txtDescripcion"), "ER_Periodo del Indicador 7 (Anual)");
+_setSelected(_select("cmbTipo"), "Anual");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

@@ -1,0 +1,1410 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_ROL = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[2]");
+
+_click(_listItem("Detalle de estructura"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "001");
+_setValue(_textarea("txtDescripcion"), "ER_Entidad 1");
+_setValue(_textarea("txtNombre"), "Nombre de la ER_Entidad 1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+//_setValue(_textarea("txtNombre"), "Nombre de la ER_Entidad 1");
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 2 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "001001");
+_setValue(_textarea("txtDescripcion"), "ER_Actividad 1.1");
+_click(_label("ER_Clientes"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "Actividad Económica");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre de la ER_Actividad 1.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+
+/* REGISTRO 3 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "001001001");
+_setValue(_textarea("txtDescripcion"), "ER_Proceso 1.1.1");
+_click(_label("ER_Clientes"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "Conocimiento del Cliente");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Proceso 1.1.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 4 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "001001001001");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 1.1.1.1");
+_click(_label("ER_Clientes"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "Nacionalidad - Constitución");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 1.1.1.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 5 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "001001001002");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 1.1.1.2");
+_click(_label("ER_Clientes"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "PEP - Listas Internas - Relación Cliente");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 1.1.1.2");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 6 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "001001001003");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 1.1.1.3");
+_click(_label("ER_Clientes"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "PEP - Listas Internas - Relación Cliente");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 1.1.1.3");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 7 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "002");
+_setValue(_textarea("txtDescripcion"), "ER_Entidad 2");
+_setValue(_textarea("txtNombre"), "Nombre de la ER_Entidad 2");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 8 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "002001");
+_setValue(_textarea("txtDescripcion"), "ER_Actividad 2.1");
+_click(_label("ER_Productos"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE CANTIDAD");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre de la ER_Actividad 2.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+
+/* REGISTRO 9 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "002001001");
+_setValue(_textarea("txtDescripcion"), "ER_Proceso 2.1.1");
+_click(_label("ER_Productos"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE COMBINACIÓN");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Proceso 2.1.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 10 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "002001001001");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 2.1.1.1");
+_click(_label("ER_Productos"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE NATURALEZA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 2.1.1.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 11 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "002001001002");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 2.1.1.2");
+_click(_label("ER_Productos"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE NATURALEZA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 2.1.1.2");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 12 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "002001001003");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 2.1.1.3");
+_click(_label("ER_Productos"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE NATURALEZA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 2.1.1.3");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 13 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "003");
+_setValue(_textarea("txtDescripcion"), "ER_Entidad 3");
+_setValue(_textarea("txtNombre"), "Nombre de la ER_Entidad 3");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 14 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "003001");
+_setValue(_textarea("txtDescripcion"), "ER_Actividad 3.1");
+_click(_label("ER_Canales"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE CANALVINCULACION");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre de la ER_Actividad 3.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+
+/* REGISTRO 15 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "003001001");
+_setValue(_textarea("txtDescripcion"), "ER_Proceso 3.1.1");
+_click(_label("ER_Canales"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE COMPORTAMIENTOCANAL");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Proceso 3.1.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 16 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "003001001001");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 3.1.1.1");
+_click(_label("ER_Canales"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE INHERENTE");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 3.1.1.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 17 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "003001001002");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 3.1.1.2");
+_click(_label("ER_Canales"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE INUSUALIDAD");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 3.1.1.2");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 18 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "003001001003");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 3.1.1.3");
+_click(_label("ER_Canales"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE JURISDICCIONPROMEDIO");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 3.1.1.3");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+
+/* REGISTRO 19 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "004");
+_setValue(_textarea("txtDescripcion"), "ER_Entidad 4");
+_setValue(_textarea("txtNombre"), "Nombre de la ER_Entidad 4");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 20 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "004001");
+_setValue(_textarea("txtDescripcion"), "ER_Actividad 4.1");
+_click(_label("ER_Jurisdicciones"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE REGIONAPERTURA");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre de la ER_Actividad 4.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+
+/* REGISTRO 21 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "004001001");
+_setValue(_textarea("txtDescripcion"), "ER_Proceso 4.1.1");
+_click(_label("ER_Jurisdicciones"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE REGIONALTOR");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Proceso 4.1.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 22 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "004001001001");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 4.1.1.1");
+_click(_label("ER_Jurisdicciones"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE PAISALTOR");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 4.1.1.1");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 23 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "004001001002");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 4.1.1.2");
+_click(_label("ER_Jurisdicciones"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE PAISALTOR");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 4.1.1.2");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+
+
+/* REGISTRO 24 */
+/* TAB DATOS GENERALES */
+_click(_span("Datos generales[1]"));
+_setValue(_textbox("txtCodigo"), "004001001003");
+_setValue(_textarea("txtDescripcion"), "ER_Subproceso 4.1.1.3");
+_click(_label("ER_Jurisdicciones"));
+_click(_imageSubmitButton("btnSrcFactor"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[2]"));
+_setValue(_textbox("DESCRIPCION[2]"), "DESCRIPCIÓN DE PAISALTOR");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textarea("txtNombre"), "Nombre del ER_Subproceso 4.1.1.3");
+/* TAB PROPIEDADES */
+_click(_span("Propiedades"));
+_click(_textbox("txtRecursoTec"));
+_click(_imageSubmitButton("btnSrcRecursoTec"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Recurso Tecnológico 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_imageSubmitButton("btnAddRecursoTec"));
+_wait(3000);
+_click(_textbox("txtTipologia"));
+_click(_imageSubmitButton("btnSrcTipologia"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[2]"), "ER_Tipología de Estructura 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+_click(_textbox("txtLineaNeg"));
+_click(_imageSubmitButton("btnSrcLineaNeg"));
+_wait(3000);
+_setValue(_textbox("Descripcion"), "ER_Línea de negocio 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_wait(3000);
+
+/* TAB DE DATOS ADICIONALES */
+_click(_span("Datos adicionales"));
+_setSelected(_select("cmbC0006"), "ER_V1");
+_setSelected(_select("cmbC0007"), "ER_V2");
+_setValue(_textarea("txtC0008"), "Comentario del ER_Campo adicional 3 (Comentario)");
+_click(_textbox("txtC0009"));
+_click(_link("14"));
+_setSelected(_select("cmbC0010"), "Si");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/*==================================================================================*/
+/*============================ AGREGANDO ROLES =====================================*/
+/* ER_ENTIDAD 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Entidad 1");
+_click(_list("container"));
+_click(_div("ER_Entidad 1"));
+_click($AGREGAR_ROL);
+_click(_textbox("txtRol"));
+_click(_imageSubmitButton("btnSrcRol"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setSelected(_checkbox("chkCamProc").checked = true);
+_setSelected(_checkbox("chkImpProc").checked = true);
+_setSelected(_checkbox("chkVisRies").checked = true);
+_setSelected(_checkbox("chkCamRies").checked = true);
+_setSelected(_checkbox("chkVisCont").checked = true);
+_setSelected(_checkbox("chkCamCont").checked = true);
+_setSelected(_checkbox("chkHereda").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* ER_ENTIDAD 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Entidad 2");
+_click(_list("container"));
+_click(_div("ER_Entidad 2"));
+_click($AGREGAR_ROL);
+_click(_textbox("txtRol"));
+_click(_imageSubmitButton("btnSrcRol"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setSelected(_checkbox("chkCamProc").checked = true);
+_setSelected(_checkbox("chkImpProc").checked = true);
+_setSelected(_checkbox("chkVisRies").checked = true);
+_setSelected(_checkbox("chkCamRies").checked = true);
+_setSelected(_checkbox("chkVisCont").checked = true);
+_setSelected(_checkbox("chkCamCont").checked = true);
+_setSelected(_checkbox("chkHereda").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* ER_ENTIDAD 3 */
+_setValue(_textbox("DESCRIPCION"), "ER_Entidad 3");
+_click(_list("container"));
+_click(_div("ER_Entidad 3"));
+_click($AGREGAR_ROL);
+_click(_textbox("txtRol"));
+_click(_imageSubmitButton("btnSrcRol"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setSelected(_checkbox("chkCamProc").checked = true);
+_setSelected(_checkbox("chkImpProc").checked = true);
+_setSelected(_checkbox("chkVisRies").checked = true);
+_setSelected(_checkbox("chkCamRies").checked = true);
+_setSelected(_checkbox("chkVisCont").checked = true);
+_setSelected(_checkbox("chkCamCont").checked = true);
+_setSelected(_checkbox("chkHereda").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* ER_ENTIDAD 4 */
+_setValue(_textbox("DESCRIPCION"), "ER_Entidad 4");
+_click(_list("container"));
+_click(_div("ER_Entidad 4"));
+_click($AGREGAR_ROL);
+_click(_textbox("txtRol"));
+_click(_imageSubmitButton("btnSrcRol"));
+_wait(3000);
+_setValue(_textbox("NOMBRE"), "ER_Administrador");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setSelected(_checkbox("chkCamProc").checked = true);
+_setSelected(_checkbox("chkImpProc").checked = true);
+_setSelected(_checkbox("chkVisRies").checked = true);
+_setSelected(_checkbox("chkCamRies").checked = true);
+_setSelected(_checkbox("chkVisCont").checked = true);
+_setSelected(_checkbox("chkCamCont").checked = true);
+_setSelected(_checkbox("chkHereda").checked = true);
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

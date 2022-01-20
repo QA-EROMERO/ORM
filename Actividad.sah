@@ -1,0 +1,180 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_SEGUIMIENTO_DE_ACTIVIDAD = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Actividad"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Actividad 1");
+_setValue(_textarea("DETALLEtxt"), "Detalle de ER_Actividad 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Actividad 2");
+_setValue(_textarea("DETALLEtxt"), "Detalle de ER_Actividad 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Actividad 3");
+_setValue(_textarea("DETALLEtxt"), "Detalle de ER_Actividad 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 4 */
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Actividad 4");
+_setValue(_textarea("DETALLEtxt"), "Detalle de ER_Actividad 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 5 */
+_setValue(_textbox("DESCRIPCIONtxt"), "ER_Actividad 5");
+_setValue(_textarea("DETALLEtxt"), "Detalle de ER_Actividad 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/*=================================================================*/
+/*================= Seguimiento de Actividad ======================*/
+/* REGISTRO 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Actividad 1");
+_click(_list("container"));
+_click(_div("ER_Actividad 1"));
+_click($AGREGAR_SEGUIMIENTO_DE_ACTIVIDAD);
+/* SEGUIMIENTO 1 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 2 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 3 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 4 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 5 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 2 */
+_setValue(_textbox("DESCRIPCION"), "ER_Actividad 2");
+_click(_list("container"));
+_click(_div("ER_Actividad 2"));
+_click($AGREGAR_SEGUIMIENTO_DE_ACTIVIDAD);
+/* SEGUIMIENTO 1 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 2 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 3 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 4 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 5 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 3 */
+_setValue(_textbox("DESCRIPCION"), "ER_Actividad 3");
+_click(_list("container"));
+_click(_div("ER_Actividad 3"));
+_click($AGREGAR_SEGUIMIENTO_DE_ACTIVIDAD);
+/* SEGUIMIENTO 1 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 2 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 3 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 4 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 5 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 4 */
+_setValue(_textbox("DESCRIPCION"), "ER_Actividad 4");
+_click(_list("container"));
+_click(_div("ER_Actividad 4"));
+_click($AGREGAR_SEGUIMIENTO_DE_ACTIVIDAD);
+/* SEGUIMIENTO 1 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 2 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 3 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 4 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 5 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* REGISTRO 5 */
+_setValue(_textbox("DESCRIPCION"), "ER_Actividad 5");
+_click(_list("container"));
+_click(_div("ER_Actividad 5"));
+_click($AGREGAR_SEGUIMIENTO_DE_ACTIVIDAD);
+/* SEGUIMIENTO 1 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 2 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 3 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 4 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* SEGUIMIENTO 5 */
+_setValue(_textarea("DETALLEtxt"), "ER_Seguimiento 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));

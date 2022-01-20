@@ -1,0 +1,751 @@
+/*====================================================*/
+/*FUNCIÓN PARA TOMAR SCREENSHOT CUANDO OCURRA UN ERROR*/
+/*====================================================*/
+function onScriptError($e){
+  _focusWindow();
+  _takeScreenShot();
+}
+onScriptFailure = onScriptError;
+
+/*LOGIN EN CADA ITERACIÓN*/
+_include("3_Autenticación_EROMERO_(PasosBlank).sah");
+
+/* SI EXISTEN TILDES COLOCAR EL NOTEPAD++ EN CODIFICACIÓN "Codificar en UTF-8 sin BOM" "*/
+/* VARIABLES */
+$AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS = _cell("Unidad de mejores prácticas[1]");
+$AGREGAR_RESPONSABILIDADES = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[2]");
+$AGREGAR_MEJORES_PRACTICAS = _span("ui-button-icon-primary ui-icon ui-icon-plusthick[1]");
+_click(_listItem("Unidad de mejores prácticas"));
+_wait(5000);
+_click(_span("Agregar"));
+_wait(5000);
+/*==================================================================*/
+/*===================== AGREGANDO REGISTROS ========================*/
+/*==================================================================*/
+/* REGISTRO 1 */
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de Mejor Práctica 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 2 */
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de Mejor Práctica 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 3 */
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de Mejor Práctica 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 4 */
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de Mejor Práctica 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* REGISTRO 5 */
+_click(_textbox("txtDescripcion"));
+_setValue(_textbox("txtDescripcion"), "ER_Unidad de Mejor Práctica 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+/*=================================================================*/
+/*======== RESPONSABILIDADES PRINCIPALES DEL REGISTRO 1 ===========*/
+/* RESPONSABILIDAD 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 1");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 1"));
+_click($AGREGAR_RESPONSABILIDADES);
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 1");
+_setValue(_textbox("txtParticipacion"), "100");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/*=================================================================*/
+/*======== RESPONSABILIDADES PRINCIPALES DEL REGISTRO 2 ===========*/
+/* RESPONSABILIDAD 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 2");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 2"));
+_click($AGREGAR_RESPONSABILIDADES);
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 1");
+_setValue(_textbox("txtParticipacion"), "50");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 2");
+_setValue(_textbox("txtParticipacion"), "50");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/*=================================================================*/
+/*======== RESPONSABILIDADES PRINCIPALES DEL REGISTRO 3 ===========*/
+/* RESPONSABILIDAD 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 3");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 3"));
+_click($AGREGAR_RESPONSABILIDADES);
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 1");
+_setValue(_textbox("txtParticipacion"), "20");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 2");
+_setValue(_textbox("txtParticipacion"), "20");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 3");
+_setValue(_textbox("txtParticipacion"), "60");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/*=================================================================*/
+/*======== RESPONSABILIDADES PRINCIPALES DEL REGISTRO 4 ===========*/
+/* RESPONSABILIDAD 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 4");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 4"));
+_click($AGREGAR_RESPONSABILIDADES);
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 1");
+_setValue(_textbox("txtParticipacion"), "25");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 2");
+_setValue(_textbox("txtParticipacion"), "25");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 3");
+_setValue(_textbox("txtParticipacion"), "25");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 4");
+_setValue(_textbox("txtParticipacion"), "25");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/*=================================================================*/
+/*======== RESPONSABILIDADES PRINCIPALES DEL REGISTRO 5 ===========*/
+/* RESPONSABILIDAD 1 */
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 5");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 5"));
+_click($AGREGAR_RESPONSABILIDADES);
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 1");
+_setValue(_textbox("txtParticipacion"), "20");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 2 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 2");
+_setValue(_textbox("txtParticipacion"), "20");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 3 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 3");
+_setValue(_textbox("txtParticipacion"), "20");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 4 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 4");
+_setValue(_textbox("txtParticipacion"), "20");
+_click(_submit("Aceptar"));
+_wait(5000);
+/* RESPONSABILIDAD 5 */
+_setValue(_textbox("txtDescripcion"), "ER_Responsabilidad principal 5");
+_setValue(_textbox("txtParticipacion"), "20");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+
+/*=================================================================*/
+/*====================== MEJORES PRÁCTICAS ========================*/
+/* UNIDAD DE MEJOR PRÁCTICA 1 */
+/* RESPONSABILIDAD 1 */
+/* MEJOR PRÁCTICA 1 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 1");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 1"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 1");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 1"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 1");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 1");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_setSelected(_checkbox("ChkAplica").checked = true);
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+
+/* UNIDAD DE MEJOR PRÁCTICA 2 */
+/* RESPONSABILIDAD 1 */
+/* MEJOR PRÁCTICA 1*/
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 2");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 2"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 1");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 1"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 1");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 1");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* RESPONSABILIDAD 2 */
+/* MEJOR PRÁCTICA 2 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 2");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 2"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 2");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 2"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 2");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 2");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_setSelected(_checkbox("ChkAplica").checked = true);
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+
+/* UNIDAD DE MEJOR PRÁCTICA 3 */
+/* RESPONSABILIDAD 1 */
+/* MEJOR PRÁCTICA 1*/
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 3");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 3"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 1");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 1"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 1");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 1");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* RESPONSABILIDAD 2 */
+/* MEJOR PRÁCTICA 2 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 3");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 3"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 2");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 2"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 2");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 2");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+/* RESPONSABILIDAD 3 */
+/* MEJOR PRÁCTICA 3 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 3");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 3"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 3");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 3"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 3");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 3");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_setSelected(_checkbox("ChkAplica").checked = true);
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+
+/* UNIDAD DE MEJOR PRÁCTICA 4 */
+/* RESPONSABILIDAD 1 */
+/* MEJOR PRÁCTICA 1*/
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 4");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 4"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 1");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 1"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 1");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 1");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* RESPONSABILIDAD 2 */
+/* MEJOR PRÁCTICA 2 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 4");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 4"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 2");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 2"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 2");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 2");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* RESPONSABILIDAD 3 */
+/* MEJOR PRÁCTICA 3 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 4");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 4"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 3");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 3"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 3");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 3");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* RESPONSABILIDAD 4 */
+/* MEJOR PRÁCTICA 4 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 4");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 4"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 4");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 4"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 4");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 4");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_setSelected(_checkbox("ChkAplica").checked = true);
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+
+
+
+/* UNIDAD DE MEJOR PRÁCTICA 5 */
+/* RESPONSABILIDAD 1 */
+/* MEJOR PRÁCTICA 1*/
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 5");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 5"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 1");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 1"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 1");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 1");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 1");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 1");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* RESPONSABILIDAD 2 */
+/* MEJOR PRÁCTICA 2 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 5");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 5"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 2");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 2"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 2");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 2");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 2");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 2");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* RESPONSABILIDAD 3 */
+/* MEJOR PRÁCTICA 3 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 5");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 5"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 3");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 3"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 3");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 3");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 3");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 3");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* RESPONSABILIDAD 4 */
+/* MEJOR PRÁCTICA 4 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 5");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 5"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 4");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 4"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 4");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 4");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 4");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 4");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+/* RESPONSABILIDAD 5 */
+/* MEJOR PRÁCTICA 5 */
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "ER_Unidad de Mejor Práctica 5");
+_click(_list("container"));
+_click(_div("ER_Unidad de Mejor Práctica 5"));
+_setValue(_textbox("DESCRIPCION[1]"), "ER_Responsabilidad principal 5");
+_click(_list("container"));
+_click(_div("ER_Responsabilidad principal 5"));
+_click(_cell("Mejores prácticas"));
+_click($AGREGAR_MEJORES_PRACTICAS);
+_click(_span("Detalle"));
+_setValue(_textbox("txtDescripcion"), "ER_Mejor práctica 5");
+_setValue(_textarea("txtDescDetallada"), "Detalle de ER_Mejor práctica 5");
+_click(_span("Información adicional"));
+_click(_textbox("txtTipoTratamiento"));
+_click(_imageSubmitButton("btnSrcTipoTratamiento"));
+_wait(3000);
+_click(_textbox("DESCRIPCION[3]"));
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de Tratamiento 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_click(_textbox("txtMedida"));
+_click(_imageSubmitButton("btnSrcMedida"));
+_wait(3000);
+_setValue(_textbox("DESCRIPCION[3]"), "ER_Tipo de medida 5");
+_click(_radio("rbTableRow"));
+_click(_radio("rbTableRow"));
+_click(_button("Aceptar"));
+_setValue(_textbox("txtCumple"), "1");
+_setValue(_textbox("txtNoCumple"), "2");
+_setSelected(_checkbox("ChkAplica").checked = true);
+_click(_span("Comentarios"));
+_setValue(_textarea("txtComentarios"), "Comentario del ER_Tipo de medida 5");
+_click(_submit("Aceptar"));
+_wait(5000);
+_click(_span("close[3]"));
+_click($AGREGAR_UNIDAD_DE_MEJORES_PRACTICAS);
+_setValue(_textbox("DESCRIPCION"), "");
+_click(_list("container"));
